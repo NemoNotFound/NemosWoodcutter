@@ -16,13 +16,13 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.devnemo.nemos.woodcutter.FabricNemosWoodcutter"
+            "com.nemonotfound.nemos.woodcutter.FabricNemosWoodcutter"
         ],
         "client": [
-          "com.devnemo.nemos.woodcutter.FabricNemosWoodcutterClient"
+            "com.nemonotfound.nemos.woodcutter.FabricNemosWoodcutterClient"
         ],
         "fabric-datagen": [
-            "com.devnemo.nemos.woodcutter.DataGenerator"
+            "com.nemonotfound.nemos.woodcutter.DataGenerator"
         ]
     },
     "mixins": [
