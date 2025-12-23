@@ -43,6 +43,7 @@ Join my Discord to meet new people and stay up to date with all of my mods!
 [![Join my Discord](https://github.com/NemoNotFound/NemoNotFound/blob/master/resources/svg/join_discord_button.svg?raw=true)](https://discord.com/invite/yxs9dga)
 
 ## Support Me
+
 I love to create mods for Minecraft and wish to live off it one day, so I hope you like what I do. <br>
 Either way feel free to give me your feedback and suggestions, either on my Discord or the [discussions](https://github.com/NemoNotFound/NemosWoodcutter/discussions/) :)
 
