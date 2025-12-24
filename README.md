@@ -9,10 +9,10 @@ For more information check the [wiki](https://wiki.nemonotfound.com/projects/min
 
 ## Supported Mods
 
-| Mod                                                                                        | Author         | Added in Version |
-|--------------------------------------------------------------------------------------------|----------------|------------------|
-| [Biomes O' Plenty](https://www.curseforge.com/minecraft/mc-mods/biomes-o-plenty)           | For stride     | 1.13             |
-| [Nemo's Mossy Blocks](https://www.curseforge.com/minecraft/mc-mods/nemos-mossy-blocks)     | Nemo _(me)_    | 1.14             |
+| Mod                                                                                        | Author      | Added in Version |
+|--------------------------------------------------------------------------------------------|-------------|------------------|
+| [Biomes O' Plenty](https://www.curseforge.com/minecraft/mc-mods/biomes-o-plenty)           | For stride  | 1.13             |
+| [Nemo's Mossy Blocks](https://www.curseforge.com/minecraft/mc-mods/nemos-mossy-blocks)     | Nemo _(me)_ | 1.14             |
 | [Nemo's Vertical Slabs](https://www.curseforge.com/minecraft/mc-mods/nemos-vertical-slabs) | Nemo _(me)_ | 1.14.1           |
 
 | Mod                                                                                                                | Author    | Supported Versions |
