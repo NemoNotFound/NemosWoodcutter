@@ -1,0 +1,8 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "minecraft:warped_planks",
+  "inputCount": 1,
+  "result": {
+    "id": "minecraft:warped_stairs"
+  }
+}

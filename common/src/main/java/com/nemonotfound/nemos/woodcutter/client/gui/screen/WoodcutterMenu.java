@@ -147,7 +147,7 @@ public class WoodcutterMenu extends AbstractContainerMenu {
                 if (inputCount >= recipe.inputCount()) {
                     this.selectedRecipeIndex.set(id);
                     this.resultContainer.setRecipeUsed(recipeHolder);
-                    this.resultSlot.set(recipe.assemble(createRecipeInput(), this.level.registryAccess()));
+                    this.resultSlot.set(recipe.assemble(createRecipeInput()));
                 }
             });
 
@@ -215,7 +215,7 @@ public class WoodcutterMenu extends AbstractContainerMenu {
                         this.resultContainer.setRecipeUsed(null);
                     } else {
                         this.resultContainer.setRecipeUsed(recipeEntry);
-                        this.resultSlot.set(woodcuttingRecipe.assemble(createRecipeInput(), this.level.registryAccess()));
+                        this.resultSlot.set(woodcuttingRecipe.assemble(createRecipeInput()));
                     }
                 },
                 () -> {
@@ -308,7 +308,7 @@ public class WoodcutterMenu extends AbstractContainerMenu {
     public void removed(@NotNull Player player) {
         super.removed(player);
         this.resultContainer.removeItemNoUpdate(1);
-        this.access.execute((world, pos) -> this.clearContainer(player, this.input));
+        this.access.execute((_, _) -> this.clearContainer(player, this.input));
     }
 }
 

@@ -1,6 +1,5 @@
 package com.nemonotfound.nemos.woodcutter.item.recipe;
 
-import com.nemonotfound.nemos.woodcutter.recipe.SingleWithCountRecipe;
 import com.nemonotfound.nemos.woodcutter.recipe.WoodcuttingRecipe;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -19,6 +18,6 @@ public class ModRecipeSerializerNeoForge {
         LOG.info("Registering recipe serializer");
         RECIPE_SERIALIZER.register(eventBus);
 
-        WOODCUTTING = RECIPE_SERIALIZER.register("woodcutting", () -> new SingleWithCountRecipe.Serializer<>(WoodcuttingRecipe::new));
+        WOODCUTTING = RECIPE_SERIALIZER.register("woodcutting", () -> WoodcuttingRecipe.SERIALIZER);
     }
 }

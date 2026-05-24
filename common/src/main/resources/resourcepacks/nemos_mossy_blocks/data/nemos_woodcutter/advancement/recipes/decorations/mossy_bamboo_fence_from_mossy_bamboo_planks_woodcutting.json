@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos_woodcutter:mossy_bamboo_fence_from_mossy_bamboo_planks_woodcutting"
+        "recipe": "minecraft:mossy_bamboo_fence_from_mossy_bamboo_planks_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "nemos_woodcutter:mossy_bamboo_fence_from_mossy_bamboo_planks_woodcutting"
+      "minecraft:mossy_bamboo_fence_from_mossy_bamboo_planks_woodcutting"
     ]
   }
 }

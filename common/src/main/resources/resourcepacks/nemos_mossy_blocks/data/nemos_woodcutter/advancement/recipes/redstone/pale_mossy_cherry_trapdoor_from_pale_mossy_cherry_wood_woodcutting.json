@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos_woodcutter:pale_mossy_cherry_trapdoor_from_pale_mossy_cherry_wood_woodcutting"
+        "recipe": "minecraft:pale_mossy_cherry_trapdoor_from_pale_mossy_cherry_wood_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "nemos_woodcutter:pale_mossy_cherry_trapdoor_from_pale_mossy_cherry_wood_woodcutting"
+      "minecraft:pale_mossy_cherry_trapdoor_from_pale_mossy_cherry_wood_woodcutting"
     ]
   }
 }

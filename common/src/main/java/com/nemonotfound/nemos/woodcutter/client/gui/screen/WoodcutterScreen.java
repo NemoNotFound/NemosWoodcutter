@@ -1,7 +1,7 @@
 package com.nemonotfound.nemos.woodcutter.client.gui.screen;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.input.MouseButtonEvent;
 import net.minecraft.client.renderer.RenderPipelines;
@@ -46,29 +46,29 @@ public class WoodcutterScreen extends AbstractContainerScreen<WoodcutterMenu> {
     }
 
     @Override
-    public void render(@NotNull GuiGraphics guiGraphics, int mouseX, int mouseY, float delta) {
-        super.render(guiGraphics, mouseX, mouseY, delta);
-        this.renderTooltip(guiGraphics, mouseX, mouseY);
+    public void extractRenderState(@NotNull GuiGraphicsExtractor guiGraphicsExtractor, int mouseX, int mouseY, float delta) {
+        super.extractRenderState(guiGraphicsExtractor, mouseX, mouseY, delta);
+        this.extractTooltip(guiGraphicsExtractor, mouseX, mouseY);
     }
 
     @Override
-    protected void renderBg(GuiGraphics guiGraphics, float delta, int mouseX, int mouseY) {
+    public void extractBackground(GuiGraphicsExtractor guiGraphicsExtractor, int mouseX, int mouseY, float a) {
         var xPos = this.leftPos;
         var yPos = this.topPos;
-        guiGraphics.blit(RenderPipelines.GUI_TEXTURED, BACKGROUND_TEXTURE, xPos, yPos, 0.0F, 0.0F, this.imageWidth, this.imageHeight, 256, 256);
+        guiGraphicsExtractor.blit(RenderPipelines.GUI_TEXTURED, BACKGROUND_TEXTURE, xPos, yPos, 0.0F, 0.0F, this.imageWidth, this.imageHeight, 256, 256);
         var yPosAfterScrolling = (int)(41.0F * this.scrollOffset);
         var scrollerTexture = this.isScrollBarActive() ? SCROLLER_SPRITE : SCROLLER_DISABLED_SPRITE;
-        guiGraphics.blitSprite(RenderPipelines.GUI_TEXTURED, scrollerTexture, xPos + 119, yPos + SCROLLER_HEIGHT + yPosAfterScrolling, SCROLLER_WIDTH, SCROLLER_HEIGHT);
+        guiGraphicsExtractor.blitSprite(RenderPipelines.GUI_TEXTURED, scrollerTexture, xPos + 119, yPos + SCROLLER_HEIGHT + yPosAfterScrolling, SCROLLER_WIDTH, SCROLLER_HEIGHT);
         var recipeXPos = this.leftPos + RELATIVE_RECIPE_X;
         var recipeYPos = this.topPos + RELATIVE_RECIPE_Y;
         var scrollOffset = this.firstVisibleRecipeIndex + 12;
-        this.renderButtons(guiGraphics, mouseX, mouseY, recipeXPos, recipeYPos, scrollOffset);
-        this.renderRecipes(guiGraphics, recipeXPos, recipeYPos, scrollOffset);
+        this.extractButtons(guiGraphicsExtractor, mouseX, mouseY, recipeXPos, recipeYPos, scrollOffset);
+        this.renderRecipes(guiGraphicsExtractor, recipeXPos, recipeYPos, scrollOffset);
     }
 
     @Override
-    protected void renderTooltip(@NotNull GuiGraphics guiGraphics, int mouseX, int mouseY) {
-        super.renderTooltip(guiGraphics, mouseX, mouseY);
+    protected void extractTooltip(@NotNull GuiGraphicsExtractor guiGraphicsExtractor, int mouseX, int mouseY) {
+        super.extractTooltip(guiGraphicsExtractor, mouseX, mouseY);
 
         if (this.areRecipesDisplayed) {
             var firstRecipeX = this.leftPos + RELATIVE_RECIPE_X;
@@ -84,13 +84,13 @@ public class WoodcutterScreen extends AbstractContainerScreen<WoodcutterMenu> {
                 if (mouseX >= mouseDistanceToRecipeX && mouseX < mouseDistanceToRecipeX + RECIPES_IMAGE_SIZE_WIDTH && mouseY >= mouseDistanceToRecipeY && mouseY < mouseDistanceToRecipeY + RECIPES_IMAGE_SIZE_HEIGHT) {
                     var contextmap = SlotDisplayContext.fromLevel(this.minecraft.level);
                     var slotDisplay = visibleRecipes.entries().get(recipeIndex).recipe().optionDisplay();
-                    guiGraphics.setTooltipForNextFrame(this.font, slotDisplay.resolveForFirstStack(contextmap), mouseX, mouseY);
+                    guiGraphicsExtractor.setTooltipForNextFrame(this.font, slotDisplay.resolveForFirstStack(contextmap), mouseX, mouseY);
                 }
             }
         }
     }
 
-    private void renderButtons(GuiGraphics guiGraphics, int mouseX, int mouseY, int xPosForRecipe,
+    private void extractButtons(GuiGraphicsExtractor guiGraphicsExtractor, int mouseX, int mouseY, int xPosForRecipe,
                                int yPosForRecipe, int lastVisibleElementIndex) {
         for (var i = this.firstVisibleRecipeIndex; i < lastVisibleElementIndex && i < this.menu.getAvailableRecipeCount(); ++i) {
             var yPosWithoutScrollOffset = i - this.firstVisibleRecipeIndex;
@@ -101,21 +101,21 @@ public class WoodcutterScreen extends AbstractContainerScreen<WoodcutterMenu> {
             int expectedInput = this.menu.getVisibleRecipes().entries().get(i).inputCount();
 
             if (actualInput < expectedInput) {
-                guiGraphics.blitSprite(RenderPipelines.GUI_TEXTURED, RECIPE_DISABLED_SPRITE, k, m - 1, RECIPES_IMAGE_SIZE_WIDTH, RECIPES_IMAGE_SIZE_HEIGHT);
+                guiGraphicsExtractor.blitSprite(RenderPipelines.GUI_TEXTURED, RECIPE_DISABLED_SPRITE, k, m - 1, RECIPES_IMAGE_SIZE_WIDTH, RECIPES_IMAGE_SIZE_HEIGHT);
             } else {
-                renderRecipeBackgroundForCraftableRecipe(guiGraphics, i, mouseX, mouseY, k, m);
+                extractRecipeBackgroundForCraftableRecipe(guiGraphicsExtractor, i, mouseX, mouseY, k, m);
             }
         }
     }
 
-    private void renderRecipeBackgroundForCraftableRecipe(GuiGraphics guiGraphics, int i, int mouseX, int mouseY, int k, int m) {
+    private void extractRecipeBackgroundForCraftableRecipe(GuiGraphicsExtractor guiGraphicsExtractor, int i, int mouseX, int mouseY, int k, int m) {
         var texture = i == this.menu.getSelectedRecipeIndex() ? RECIPE_SELECTED_SPRITE :
                 (mouseX >= k && mouseY >= m && mouseX < k + RECIPES_IMAGE_SIZE_WIDTH && mouseY < m + RECIPES_IMAGE_SIZE_HEIGHT ? RECIPE_HIGHLIGHTED_SPRITE : RECIPE_SPRITE);
 
-        guiGraphics.blitSprite(RenderPipelines.GUI_TEXTURED, texture, k, m - 1, RECIPES_IMAGE_SIZE_WIDTH, RECIPES_IMAGE_SIZE_HEIGHT);
+        guiGraphicsExtractor.blitSprite(RenderPipelines.GUI_TEXTURED, texture, k, m - 1, RECIPES_IMAGE_SIZE_WIDTH, RECIPES_IMAGE_SIZE_HEIGHT);
     }
 
-    private void renderRecipes(GuiGraphics guiGraphics, int x, int y, int startIndex) {
+    private void renderRecipes(GuiGraphicsExtractor guiGraphicsExtractor, int x, int y, int startIndex) {
         var availableRecipes = this.menu.getVisibleRecipes();
         var contextMap = SlotDisplayContext.fromLevel(this.minecraft.level);
 
@@ -126,7 +126,7 @@ public class WoodcutterScreen extends AbstractContainerScreen<WoodcutterMenu> {
             var m = y + l * RECIPES_IMAGE_SIZE_HEIGHT + 2;
             var slotDisplay = (availableRecipes.entries().get(i)).recipe().optionDisplay();
 
-            guiGraphics.renderItem(slotDisplay.resolveForFirstStack(contextMap), k, m);
+            guiGraphicsExtractor.item(slotDisplay.resolveForFirstStack(contextMap), k, m);
         }
     }
 

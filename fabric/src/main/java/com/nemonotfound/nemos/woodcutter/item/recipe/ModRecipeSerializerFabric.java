@@ -1,6 +1,5 @@
 package com.nemonotfound.nemos.woodcutter.item.recipe;
 
-import com.nemonotfound.nemos.woodcutter.recipe.SingleWithCountRecipe;
 import com.nemonotfound.nemos.woodcutter.recipe.WoodcuttingRecipe;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -19,7 +18,7 @@ public class ModRecipeSerializerFabric {
     public static void register() {
         LOG.info("Registering recipe serializer");
 
-        WOODCUTTING = register("woodcutting", new SingleWithCountRecipe.Serializer<>(WoodcuttingRecipe::new));
+        WOODCUTTING = register("woodcutting", WoodcuttingRecipe.SERIALIZER);
     }
 
     private static <S extends RecipeSerializer<T>, T extends Recipe<?>> Supplier<S> register(String path, S serializer) {

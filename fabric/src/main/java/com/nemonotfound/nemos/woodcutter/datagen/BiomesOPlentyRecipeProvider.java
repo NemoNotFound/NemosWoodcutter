@@ -4,13 +4,14 @@ import biomesoplenty.api.block.BOPBlocks;
 import biomesoplenty.api.item.BOPItems;
 import biomesoplenty.init.ModTags;
 import com.nemonotfound.nemos.woodcutter.platform.Services;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import org.jetbrains.annotations.NotNull;
+import org.jspecify.annotations.NonNull;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -19,12 +20,12 @@ import static com.nemonotfound.nemos.woodcutter.Constants.BIOMES_O_PLENTY_MOD_ID
 
 public class BiomesOPlentyRecipeProvider extends FabricRecipeProvider {
     
-    public BiomesOPlentyRecipeProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> provider) {
+    public BiomesOPlentyRecipeProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> provider) {
         super(output, provider);
     }
 
     @Override
-    protected @NotNull RecipeProvider createRecipeProvider(HolderLookup.@NotNull Provider provider, RecipeOutput recipeOutput) {
+    protected @NotNull RecipeProvider createRecipeProvider(HolderLookup.@NotNull Provider provider, @NonNull RecipeOutput recipeOutput) {
         return new WoodcutterRecipeProvider(provider, recipeOutput) {
 
             @Override

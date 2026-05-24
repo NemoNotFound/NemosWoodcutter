@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos_woodcutter:stripped_birch_log_from_mossy_birch_log_woodcutting"
+        "recipe": "minecraft:stripped_birch_log_from_mossy_birch_log_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "nemos_woodcutter:stripped_birch_log_from_mossy_birch_log_woodcutting"
+      "minecraft:stripped_birch_log_from_mossy_birch_log_woodcutting"
     ]
   }
 }

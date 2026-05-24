@@ -1,16 +1,11 @@
 package com.nemonotfound.nemos.woodcutter;
 
-import com.nemonotfound.nemos.woodcutter.world.level.block.WoodcutterBlocks;
 import com.nemonotfound.nemos.woodcutter.client.gui.screen.WoodcutterScreen;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
-import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.fabric.api.resource.v1.ResourceLoader;
 import net.fabricmc.fabric.api.resource.v1.pack.PackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 
@@ -22,7 +17,6 @@ public class FabricNemosWoodcutterClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         MenuScreens.register(WOODCUTTER_SCREEN_HANDLER.get(), WoodcutterScreen::new);
-        BlockRenderLayerMap.putBlock(WoodcutterBlocks.WOODCUTTER.get(), ChunkSectionLayer.CUTOUT);
         registerBuiltInResourcePack();
     }
 

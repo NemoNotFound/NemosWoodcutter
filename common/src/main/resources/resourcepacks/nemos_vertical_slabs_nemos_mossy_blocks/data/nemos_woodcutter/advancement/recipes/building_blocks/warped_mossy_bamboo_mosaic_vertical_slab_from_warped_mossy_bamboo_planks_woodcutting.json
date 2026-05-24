@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos_woodcutter:warped_mossy_bamboo_mosaic_vertical_slab_from_warped_mossy_bamboo_planks_woodcutting"
+        "recipe": "minecraft:warped_mossy_bamboo_mosaic_vertical_slab_from_warped_mossy_bamboo_planks_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "nemos_woodcutter:warped_mossy_bamboo_mosaic_vertical_slab_from_warped_mossy_bamboo_planks_woodcutting"
+      "minecraft:warped_mossy_bamboo_mosaic_vertical_slab_from_warped_mossy_bamboo_planks_woodcutting"
     ]
   }
 }

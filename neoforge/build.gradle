@@ -17,10 +17,6 @@ neoForge {
     if (at.exists()) {
         accessTransformers.add(at.absolutePath)
     }
-    parchment {
-        minecraftVersion = parchment_minecraft
-        mappingsVersion = parchment_version
-    }
     runs {
         configureEach {
             systemProperty('neoforge.enabledGameTestNamespaces', mod_id)
@@ -60,7 +56,7 @@ tasks.register('publishCurseForge', TaskPublishCurseForge) {
     mainFile.releaseType = 'release'
     mainFile.addModLoader("NeoForge")
     mainFile.addEnvironment("Client", "Server")
-    mainFile.addJavaVersion("Java 21")
+    mainFile.addJavaVersion("Java 25")
     mainFile.addOptional("biomes-o-plenty")
     mainFile.addOptional("nemos-mossy-blocks")
     mainFile.addOptional("nemos-vertical-slabs")

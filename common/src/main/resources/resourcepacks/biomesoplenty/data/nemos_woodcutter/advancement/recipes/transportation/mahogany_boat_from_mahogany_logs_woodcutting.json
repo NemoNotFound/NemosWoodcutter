@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos_woodcutter:mahogany_boat_from_mahogany_logs_woodcutting"
+        "recipe": "minecraft:mahogany_boat_from_mahogany_logs_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "nemos_woodcutter:mahogany_boat_from_mahogany_logs_woodcutting"
+      "minecraft:mahogany_boat_from_mahogany_logs_woodcutting"
     ]
   }
 }

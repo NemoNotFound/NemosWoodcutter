@@ -1,0 +1,8 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "minecraft:dark_oak_wood",
+  "inputCount": 1,
+  "result": {
+    "id": "minecraft:stripped_dark_oak_wood"
+  }
+}

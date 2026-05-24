@@ -2,27 +2,20 @@ import net.darkhax.curseforgegradle.TaskPublishCurseForge
 
 plugins {
     id 'multiloader-loader'
-    id 'fabric-loom'
+    id 'net.fabricmc.fabric-loom'
     id("com.modrinth.minotaur")
 }
 
 dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"
-    mappings loom.layered {
-        officialMojangMappings()
-        parchment("org.parchmentmc.data:parchment-${parchment_minecraft}:${parchment_version}@zip")
-    }
-    modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
+    implementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
 
-    modCompileOnly("maven.modrinth:biomes-o-plenty:${biomes_o_plenty_version}-fabric")
-    modCompileOnly("maven.modrinth:terrablender:${terrablender_version}-fabric")
-    modCompileOnly("maven.modrinth:glitchcore:${glitchcore_version}-fabric")
-    compileOnly("com.electronwill.night-config:toml:${night_config_version}")
-    compileOnly("com.electronwill.night-config:core:${night_config_version}")
-    compileOnly("net.jodah:typetools:${typetools_version}")
-    modCompileOnly("maven.modrinth:nemos-mossy-blocks:${nemos_mossy_blocks_version}-fabric")
-    modCompileOnly("maven.modrinth:nemos-vertical-slabs:${nemos_vertical_slabs_version}-fabric")
+    compileOnly("maven.modrinth:biomes-o-plenty:${biomes_o_plenty_version}-fabric")
+    compileOnly("maven.modrinth:terrablender:${terrablender_version}-fabric")
+    compileOnly("maven.modrinth:glitchcore:${glitchcore_version}-fabric")
+    compileOnly("maven.modrinth:nemos-mossy-blocks:${nemos_mossy_blocks_version}-fabric")
+    compileOnly("maven.modrinth:nemos-vertical-slabs:${nemos_vertical_slabs_version}-fabric")
 }
 
 fabricApi {
@@ -83,16 +76,17 @@ loom {
 sourceSets.main.resources { srcDir project.project(':common').file('src/generated/resources/').getAbsolutePath() }
 
 tasks.register('publishCurseForge', TaskPublishCurseForge) {
-    dependsOn(tasks.remapJar)
+    dependsOn(tasks.jar)
     apiToken = System.getenv("CURSEFORGE_TOKEN")
 
     def projectId = findProperty('curseforge_project_id')
 
-    def mainFile = upload(projectId, tasks.remapJar.archiveFile)
+    def mainFile = upload(projectId, tasks.jar.archiveFile)
     mainFile.changelog = file('../changelog.md')
     mainFile.displayName = findProperty('mod_name') + ' Fabric ' + findProperty('version')
     mainFile.releaseType = 'release'
     mainFile.addEnvironment("Client", "Server")
+    mainFile.addJavaVersion("Java 25")
     mainFile.addRequirement("fabric-api")
     mainFile.addOptional("biomes-o-plenty")
     mainFile.addOptional("nemos-mossy-blocks")
@@ -105,7 +99,7 @@ modrinth {
     changelog.set(file('../changelog.md').text)
     versionName.set(findProperty('mod_name') + ' Fabric ' + findProperty('version'))
     versionType.set("release")
-    uploadFile.set(tasks.remapJar)
+    uploadFile.set(tasks.jar)
     dependencies {
         required.project("fabric-api")
         optional.project("biomes-o-plenty")
@@ -113,4 +107,4 @@ modrinth {
         optional.project("nemos-vertical-slabs")
     }
 }
-tasks.modrinth.dependsOn(tasks.remapJar)
+tasks.modrinth.dependsOn(tasks.jar)

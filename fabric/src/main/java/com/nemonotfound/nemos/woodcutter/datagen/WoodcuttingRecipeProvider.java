@@ -1,6 +1,6 @@
 package com.nemonotfound.nemos.woodcutter.datagen;
 
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeCategory;
@@ -10,17 +10,18 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import org.jetbrains.annotations.NotNull;
+import org.jspecify.annotations.NonNull;
 
 import java.util.concurrent.CompletableFuture;
 
 public class WoodcuttingRecipeProvider extends FabricRecipeProvider {
 
-    public WoodcuttingRecipeProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> provider) {
+    public WoodcuttingRecipeProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> provider) {
         super(output, provider);
     }
 
     @Override
-    protected @NotNull RecipeProvider createRecipeProvider(HolderLookup.Provider provider, RecipeOutput recipeOutput) {
+    protected @NotNull RecipeProvider createRecipeProvider(HolderLookup.@NonNull Provider provider, @NonNull RecipeOutput recipeOutput) {
         return new WoodcutterRecipeProvider(provider, recipeOutput) {
 
             @Override

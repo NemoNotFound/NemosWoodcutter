@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos_woodcutter:crimson_mossy_cherry_stairs_from_crimson_mossy_cherry_planks_woodcutting"
+        "recipe": "minecraft:crimson_mossy_cherry_stairs_from_crimson_mossy_cherry_planks_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "nemos_woodcutter:crimson_mossy_cherry_stairs_from_crimson_mossy_cherry_planks_woodcutting"
+      "minecraft:crimson_mossy_cherry_stairs_from_crimson_mossy_cherry_planks_woodcutting"
     ]
   }
 }

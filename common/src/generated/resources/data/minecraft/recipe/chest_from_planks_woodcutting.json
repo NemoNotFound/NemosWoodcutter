@@ -1,0 +1,8 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "#minecraft:planks",
+  "inputCount": 4,
+  "result": {
+    "id": "minecraft:chest"
+  }
+}

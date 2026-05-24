@@ -1,0 +1,8 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "minecraft:mangrove_log",
+  "inputCount": 1,
+  "result": {
+    "id": "minecraft:stripped_mangrove_log"
+  }
+}

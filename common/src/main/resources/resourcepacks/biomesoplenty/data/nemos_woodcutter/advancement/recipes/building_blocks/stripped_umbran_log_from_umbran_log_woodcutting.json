@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos_woodcutter:stripped_umbran_log_from_umbran_log_woodcutting"
+        "recipe": "minecraft:stripped_umbran_log_from_umbran_log_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "nemos_woodcutter:stripped_umbran_log_from_umbran_log_woodcutting"
+      "minecraft:stripped_umbran_log_from_umbran_log_woodcutting"
     ]
   }
 }

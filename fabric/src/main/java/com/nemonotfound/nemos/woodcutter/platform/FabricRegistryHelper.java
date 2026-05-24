@@ -1,11 +1,11 @@
 package com.nemonotfound.nemos.woodcutter.platform;
 
 import com.nemonotfound.nemos.woodcutter.platform.services.IRegistryHelper;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -45,7 +45,7 @@ public class FabricRegistryHelper implements IRegistryHelper {
 
     @Override
     public CreativeModeTab.Builder createCreativeModeTab() {
-        return FabricItemGroup.builder();
+        return FabricCreativeModeTab.builder();
     }
 
     private static <T, R extends Registry<? super T>> Supplier<T> registerSupplier(R registry, String id, Supplier<T> object) {

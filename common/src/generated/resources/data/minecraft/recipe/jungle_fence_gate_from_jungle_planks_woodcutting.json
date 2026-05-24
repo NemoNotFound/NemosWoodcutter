@@ -1,0 +1,8 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "minecraft:jungle_planks",
+  "inputCount": 1,
+  "result": {
+    "id": "minecraft:jungle_fence_gate"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "minecraft:jungle_wood",
+  "inputCount": 1,
+  "result": {
+    "id": "minecraft:stripped_jungle_wood"
+  }
+}

@@ -5,7 +5,7 @@ move_files() {
   local directoryName
   directoryName=$(IFS=_; echo "${ids[*]}")
 
-  local src="../common/src/generated/resources/data/nemos_woodcutter/recipe"
+  local src="../common/src/generated/resources/data/minecraft/recipe"
   local dest="../common/src/main/resources/resourcepacks/${directoryName}/data/nemos_woodcutter/recipe"
 
   # Build JSON array from bash args for jq comparison

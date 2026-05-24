@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos_woodcutter:spruce_vertical_slab_from_spruce_logs_woodcutting"
+        "recipe": "minecraft:spruce_vertical_slab_from_spruce_logs_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "nemos_woodcutter:spruce_vertical_slab_from_spruce_logs_woodcutting"
+      "minecraft:spruce_vertical_slab_from_spruce_logs_woodcutting"
     ]
   }
 }

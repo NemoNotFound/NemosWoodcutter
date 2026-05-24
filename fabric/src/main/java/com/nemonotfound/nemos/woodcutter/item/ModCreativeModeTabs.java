@@ -1,7 +1,7 @@
 package com.nemonotfound.nemos.woodcutter.item;
 
 import com.nemonotfound.nemos.woodcutter.world.item.WoodcutterItems;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Items;
 
@@ -16,7 +16,7 @@ public class ModCreativeModeTabs {
     }
 
     private static void modifyFunctionalItemGroup() {
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS)
-                .register(entries -> entries.addAfter(Items.STONECUTTER, WoodcutterItems.WOODCUTTER.get()));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS)
+                .register(entries -> entries.insertAfter(Items.STONECUTTER, WoodcutterItems.WOODCUTTER.get()));
     }
 }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos_woodcutter:jacaranda_boat_from_jacaranda_logs_woodcutting"
+        "recipe": "minecraft:jacaranda_boat_from_jacaranda_logs_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "nemos_woodcutter:jacaranda_boat_from_jacaranda_logs_woodcutting"
+      "minecraft:jacaranda_boat_from_jacaranda_logs_woodcutting"
     ]
   }
 }

@@ -1,0 +1,8 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "#minecraft:cherry_logs",
+  "inputCount": 1,
+  "result": {
+    "id": "minecraft:cherry_boat"
+  }
+}

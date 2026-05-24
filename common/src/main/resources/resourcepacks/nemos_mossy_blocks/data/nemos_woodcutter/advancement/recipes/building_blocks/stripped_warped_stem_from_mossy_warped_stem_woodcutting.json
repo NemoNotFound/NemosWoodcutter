@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos_woodcutter:stripped_warped_stem_from_mossy_warped_stem_woodcutting"
+        "recipe": "minecraft:stripped_warped_stem_from_mossy_warped_stem_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "nemos_woodcutter:stripped_warped_stem_from_mossy_warped_stem_woodcutting"
+      "minecraft:stripped_warped_stem_from_mossy_warped_stem_woodcutting"
     ]
   }
 }

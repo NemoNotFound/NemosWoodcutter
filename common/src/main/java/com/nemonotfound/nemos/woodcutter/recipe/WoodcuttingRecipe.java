@@ -1,13 +1,13 @@
 package com.nemonotfound.nemos.woodcutter.recipe;
 
+import com.mojang.serialization.MapCodec;
 import com.nemonotfound.nemos.woodcutter.recipe.book.ModRecipeBookCategory;
 import com.nemonotfound.nemos.woodcutter.recipe.display.WoodcutterRecipeDisplay;
 import com.nemonotfound.nemos.woodcutter.world.item.WoodcutterItems;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeBookCategory;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.world.item.ItemStackTemplate;
+import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.item.crafting.display.RecipeDisplay;
 import net.minecraft.world.item.crafting.display.SlotDisplay;
 import org.jetbrains.annotations.NotNull;
@@ -16,13 +16,17 @@ import java.util.List;
 
 public class WoodcuttingRecipe extends SingleWithCountRecipe {
 
-    public WoodcuttingRecipe(String group, List<String> modDependencies, Ingredient ingredient, int inputCount, ItemStack result) {
-        super(group, modDependencies, ingredient, inputCount, result);
+    public static final MapCodec<WoodcuttingRecipe> MAP_CODEC = simpleMapCodec(WoodcuttingRecipe::new);
+    public static final StreamCodec<RegistryFriendlyByteBuf, WoodcuttingRecipe> STREAM_CODEC = simpleStreamCodec(WoodcuttingRecipe::new);
+    public static final RecipeSerializer<WoodcuttingRecipe> SERIALIZER = new RecipeSerializer<>(MAP_CODEC, STREAM_CODEC);
+
+    public WoodcuttingRecipe(Recipe.CommonInfo commonInfo, String group, List<String> modDependencies, Ingredient ingredient, int inputCount, ItemStackTemplate result) {
+        super(commonInfo, group, modDependencies, ingredient, inputCount, result);
     }
 
     @Override
     public @NotNull RecipeSerializer<WoodcuttingRecipe> getSerializer() {
-        return WoodcutterRecipeSerializer.WOODCUTTING.get();
+        return SERIALIZER;
     }
 
     @Override

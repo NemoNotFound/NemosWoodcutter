@@ -1,0 +1,8 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "#minecraft:bamboo_blocks",
+  "inputCount": 1,
+  "result": {
+    "id": "minecraft:bamboo_mosaic_stairs"
+  }
+}

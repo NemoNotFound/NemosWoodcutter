@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos_woodcutter:mangrove_vertical_slab_from_mangrove_logs_woodcutting"
+        "recipe": "minecraft:mangrove_vertical_slab_from_mangrove_logs_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "nemos_woodcutter:mangrove_vertical_slab_from_mangrove_logs_woodcutting"
+      "minecraft:mangrove_vertical_slab_from_mangrove_logs_woodcutting"
     ]
   }
 }

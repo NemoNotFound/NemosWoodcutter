@@ -1,0 +1,8 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "minecraft:warped_hyphae",
+  "inputCount": 1,
+  "result": {
+    "id": "minecraft:stripped_warped_hyphae"
+  }
+}

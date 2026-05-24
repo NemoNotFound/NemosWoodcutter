@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos_woodcutter:palm_trapdoor_from_palm_logs_woodcutting"
+        "recipe": "minecraft:palm_trapdoor_from_palm_logs_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "nemos_woodcutter:palm_trapdoor_from_palm_logs_woodcutting"
+      "minecraft:palm_trapdoor_from_palm_logs_woodcutting"
     ]
   }
 }

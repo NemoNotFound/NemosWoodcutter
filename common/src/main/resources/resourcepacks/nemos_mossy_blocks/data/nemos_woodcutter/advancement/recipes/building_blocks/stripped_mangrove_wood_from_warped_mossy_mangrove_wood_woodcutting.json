@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos_woodcutter:stripped_mangrove_wood_from_warped_mossy_mangrove_wood_woodcutting"
+        "recipe": "minecraft:stripped_mangrove_wood_from_warped_mossy_mangrove_wood_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "nemos_woodcutter:stripped_mangrove_wood_from_warped_mossy_mangrove_wood_woodcutting"
+      "minecraft:stripped_mangrove_wood_from_warped_mossy_mangrove_wood_woodcutting"
     ]
   }
 }

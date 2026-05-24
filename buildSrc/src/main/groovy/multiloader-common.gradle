@@ -27,19 +27,6 @@ repositories {
         }
         filter { includeGroupAndSubgroups('org.spongepowered') }
     }
-    exclusiveContent {
-        forRepositories(
-                maven {
-                    name = 'ParchmentMC'
-                    url = 'https://maven.parchmentmc.org/'
-                },
-                maven {
-                    name = "NeoForge"
-                    url = 'https://maven.neoforged.net/releases'
-                }
-        )
-        filter { includeGroup('org.parchmentmc.data') }
-    }
     maven {
         name = 'BlameJared'
         url = 'https://maven.blamejared.com'
@@ -98,15 +85,11 @@ processResources {
             'description'                  : project.description,
             'neoforge_version'             : neoforge_version,
             'neoforge_loader_version_range': neoforge_loader_version_range,
-            "forge_version"                : forge_version,
-            "forge_loader_version_range"   : forge_loader_version_range,
             'credits'                      : credits,
             'java_version'                 : java_version,
             'biomes_o_plenty_version'      : biomes_o_plenty_version,
             'terrablender_version'         : terrablender_version,
             'glitchcore_version'           : glitchcore_version,
-            'night_config_version'         : night_config_version,
-            'typetools_version'            : typetools_version,
             'nemos_mossy_blocks_version'   : nemos_mossy_blocks_version
     ]
 

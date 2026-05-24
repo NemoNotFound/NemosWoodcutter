@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos_woodcutter:stripped_cherry_wood_from_crimson_mossy_cherry_wood_woodcutting"
+        "recipe": "minecraft:stripped_cherry_wood_from_crimson_mossy_cherry_wood_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "nemos_woodcutter:stripped_cherry_wood_from_crimson_mossy_cherry_wood_woodcutting"
+      "minecraft:stripped_cherry_wood_from_crimson_mossy_cherry_wood_woodcutting"
     ]
   }
 }

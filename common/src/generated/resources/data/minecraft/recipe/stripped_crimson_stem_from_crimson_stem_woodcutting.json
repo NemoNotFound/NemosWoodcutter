@@ -1,0 +1,8 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "minecraft:crimson_stem",
+  "inputCount": 1,
+  "result": {
+    "id": "minecraft:stripped_crimson_stem"
+  }
+}

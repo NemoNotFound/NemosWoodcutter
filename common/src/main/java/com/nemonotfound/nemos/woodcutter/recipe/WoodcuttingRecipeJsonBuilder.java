@@ -1,27 +1,22 @@
 package com.nemonotfound.nemos.woodcutter.recipe;
 
-import net.minecraft.advancements.Advancement;
-import net.minecraft.advancements.AdvancementRequirements;
-import net.minecraft.advancements.AdvancementRewards;
 import net.minecraft.advancements.Criterion;
-import net.minecraft.advancements.criterion.RecipeUnlockedTrigger;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.data.recipes.RecipeBuilder;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.data.recipes.RecipeUnlockAdvancementBuilder;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.Identifier;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.ItemLike;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.jspecify.annotations.NonNull;
 
-import java.util.*;
-
-import static com.nemonotfound.nemos.woodcutter.Constants.MOD_ID;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 public class WoodcuttingRecipeJsonBuilder implements RecipeBuilder {
 
@@ -29,43 +24,45 @@ public class WoodcuttingRecipeJsonBuilder implements RecipeBuilder {
     private final SingleWithCountRecipe.RecipeFactory<?> recipeFactory;
     private final Ingredient input;
     private final int inputCount;
-    private final Item output;
-    private final int count;
-    private final Map<String, Criterion<?>> criteria = new LinkedHashMap<>();
+    private final RecipeUnlockAdvancementBuilder advancementBuilder = new RecipeUnlockAdvancementBuilder();
+    private final ItemStackTemplate result;
     @Nullable
     private String group;
     private List<String> modDependencies = new ArrayList<>();
 
     public WoodcuttingRecipeJsonBuilder(
-            RecipeCategory category, SingleWithCountRecipe.RecipeFactory<?> recipeFactory, Ingredient input,
-            int inputCount, ItemLike output, int count) {
+            RecipeCategory category,
+            SingleWithCountRecipe.RecipeFactory<?> recipeFactory,
+            Ingredient input,
+            int inputCount,
+            ItemStackTemplate result
+    ) {
         this.category = category;
         this.recipeFactory = recipeFactory;
         this.input = input;
         this.inputCount = inputCount;
-        this.output = output.asItem();
-        this.count = count;
+        this.result = result;
     }
 
-    public static WoodcuttingRecipeJsonBuilder createWoodcutting(RecipeCategory category, Ingredient input, ItemLike output) {
-        return new WoodcuttingRecipeJsonBuilder(category, WoodcuttingRecipe::new, input, 1, output, 1);
+    public static WoodcuttingRecipeJsonBuilder createWoodcutting(RecipeCategory category, Ingredient input, ItemLike result) {
+        return createWoodcutting(category, input, 1, result, 1);
     }
 
-    public static WoodcuttingRecipeJsonBuilder createWoodcutting(RecipeCategory category, Ingredient input, ItemLike output, int count) {
-        return new WoodcuttingRecipeJsonBuilder(category, WoodcuttingRecipe::new, input, 1, output, count);
+    public static WoodcuttingRecipeJsonBuilder createWoodcutting(RecipeCategory category, Ingredient input, ItemLike result, int count) {
+        return createWoodcutting(category, input, 1, result, count);
     }
 
-    public static WoodcuttingRecipeJsonBuilder createWoodcutting(RecipeCategory category, Ingredient input, int inputCount, ItemLike output) {
-        return new WoodcuttingRecipeJsonBuilder(category, WoodcuttingRecipe::new, input, inputCount, output, 1);
+    public static WoodcuttingRecipeJsonBuilder createWoodcutting(RecipeCategory category, Ingredient input, int inputCount, ItemLike result) {
+        return createWoodcutting(category, input, inputCount, result, 1);
     }
 
-    public static WoodcuttingRecipeJsonBuilder createWoodcutting(RecipeCategory category, Ingredient input, int inputCount, ItemLike output, int count) {
-        return new WoodcuttingRecipeJsonBuilder(category, WoodcuttingRecipe::new, input, inputCount, output, count);
+    public static WoodcuttingRecipeJsonBuilder createWoodcutting(RecipeCategory category, Ingredient input, int inputCount, ItemLike result, int count) {
+        return new WoodcuttingRecipeJsonBuilder(category, WoodcuttingRecipe::new, input, inputCount, new ItemStackTemplate(result.asItem(), count));
     }
 
     @Override
     public @NotNull RecipeBuilder unlockedBy(@NotNull String name, @NotNull Criterion<?> criterion) {
-        this.criteria.put(name, criterion);
+        this.advancementBuilder.unlockedBy(name, criterion);
         return this;
     }
 
@@ -75,44 +72,19 @@ public class WoodcuttingRecipeJsonBuilder implements RecipeBuilder {
         return this;
     }
 
+    @Override
+    public @NonNull ResourceKey<Recipe<?>> defaultId() {
+        return RecipeBuilder.getDefaultRecipeId(this.result);
+    }
+
     public @NotNull RecipeBuilder modDependencies(@Nullable List<String> modDependencies) {
         this.modDependencies = modDependencies;
         return this;
     }
 
     @Override
-    public @NotNull Item getResult() {
-        return this.output;
-    }
-
-    @Override
-    public void save(@NotNull RecipeOutput recipeOutput, @NotNull String id) {
-        Identifier defaultRecipeIdentifier = RecipeBuilder.getDefaultRecipeId(this.getResult());
-        Identifier recipeIdentifier = Identifier.fromNamespaceAndPath(MOD_ID, id);
-
-        if (recipeIdentifier.equals(defaultRecipeIdentifier)) {
-            throw new IllegalStateException("Recipe " + id + " should remove its 'save' argument as it is equal to default one");
-        } else {
-            this.save(recipeOutput, ResourceKey.create(Registries.RECIPE, recipeIdentifier));
-        }
-    }
-
-    @Override
-    public void save(RecipeOutput recipeOutput, @NotNull ResourceKey<Recipe<?>> resourceKey) {
-        this.validate(resourceKey);
-        Advancement.Builder builder = recipeOutput.advancement()
-                .addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(resourceKey))
-                .rewards(AdvancementRewards.Builder.recipe(resourceKey))
-                .requirements(AdvancementRequirements.Strategy.OR);
-        this.criteria.forEach(builder::addCriterion);
-        SingleWithCountRecipe singleWithCountRecipe = this.recipeFactory
-                .create(Objects.requireNonNullElse(this.group, ""), this.modDependencies, this.input, this.inputCount, new ItemStack(this.output, this.count));
-        recipeOutput.accept(resourceKey, singleWithCountRecipe, builder.build(resourceKey.identifier().withPrefix("recipes/" + this.category.getFolderName() + "/")));
-    }
-
-    private void validate(ResourceKey<Recipe<?>> resourceKey) {
-        if (this.criteria.isEmpty()) {
-            throw new IllegalStateException("No way of obtaining recipe " + resourceKey.identifier());
-        }
+    public void save(RecipeOutput output, @NonNull ResourceKey<Recipe<?>> id) {
+        SingleWithCountRecipe recipe = this.recipeFactory.create(new Recipe.CommonInfo(true), Objects.requireNonNullElse(this.group, ""), this.modDependencies, this.input, this.inputCount, this.result);
+        output.accept(id, recipe, this.advancementBuilder.build(output, id, category));
     }
 }

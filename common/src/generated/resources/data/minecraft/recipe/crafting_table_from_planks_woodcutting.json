@@ -1,0 +1,8 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "#minecraft:planks",
+  "inputCount": 1,
+  "result": {
+    "id": "minecraft:crafting_table"
+  }
+}

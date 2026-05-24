@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos_woodcutter:hellbark_planks_from_hellbark_logs_woodcutting"
+        "recipe": "minecraft:hellbark_planks_from_hellbark_logs_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "nemos_woodcutter:hellbark_planks_from_hellbark_logs_woodcutting"
+      "minecraft:hellbark_planks_from_hellbark_logs_woodcutting"
     ]
   }
 }

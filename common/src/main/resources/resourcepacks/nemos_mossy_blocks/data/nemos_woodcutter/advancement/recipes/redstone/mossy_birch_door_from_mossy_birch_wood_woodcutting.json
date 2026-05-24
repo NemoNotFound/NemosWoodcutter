@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos_woodcutter:mossy_birch_door_from_mossy_birch_wood_woodcutting"
+        "recipe": "minecraft:mossy_birch_door_from_mossy_birch_wood_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "nemos_woodcutter:mossy_birch_door_from_mossy_birch_wood_woodcutting"
+      "minecraft:mossy_birch_door_from_mossy_birch_wood_woodcutting"
     ]
   }
 }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos_woodcutter:warped_mossy_spruce_trapdoor_from_warped_mossy_spruce_wood_woodcutting"
+        "recipe": "minecraft:warped_mossy_spruce_trapdoor_from_warped_mossy_spruce_wood_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "nemos_woodcutter:warped_mossy_spruce_trapdoor_from_warped_mossy_spruce_wood_woodcutting"
+      "minecraft:warped_mossy_spruce_trapdoor_from_warped_mossy_spruce_wood_woodcutting"
     ]
   }
 }
