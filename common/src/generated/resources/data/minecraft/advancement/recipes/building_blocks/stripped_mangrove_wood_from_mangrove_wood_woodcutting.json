@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:stripped_mangrove_wood_from_mangrove_wood_woodcutting"
+        "recipes": "minecraft:stripped_mangrove_wood_from_mangrove_wood_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -1,26 +1,27 @@
 package com.nemonotfound.nemos.woodcutter.datagen;
 
-import com.nemonotfound.nemos.woodcutter.world.level.block.WoodcutterBlocks;
 import com.nemonotfound.nemos.woodcutter.recipe.WoodcuttingRecipeJsonBuilder;
-import net.minecraft.core.HolderLookup;
+import com.nemonotfound.nemos.woodcutter.world.level.block.WoodcutterBlocks;
+import net.minecraft.advancements.Advancement;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.recipes.RecipeBuilder;
 import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.ItemLike;
 
 import java.util.List;
 
 public abstract class WoodcutterRecipeProvider extends RecipeProvider {
 
-    protected WoodcutterRecipeProvider(HolderLookup.Provider registries, RecipeOutput output) {
-        super(registries, output);
+    protected WoodcutterRecipeProvider(BootstrapContext<Recipe<?>> recipeOutput, BootstrapContext<Advancement> advancementOutput) {
+        super(recipeOutput, advancementOutput);
     }
 
     protected void createWoodcuttingRecipe(RecipeCategory recipeCategory, List<String> modDependencies, TagKey<Item> inputTag, String criteria, Item result) {

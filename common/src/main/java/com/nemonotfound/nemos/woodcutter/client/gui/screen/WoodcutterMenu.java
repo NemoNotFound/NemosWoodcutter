@@ -16,6 +16,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.util.Prediction;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.level.Level;
@@ -287,7 +288,7 @@ public class WoodcutterMenu extends AbstractContainerMenu {
 
             slot2.onTake(player, itemStack2);
             if (slot == 1) {
-                player.drop(itemStack2, false);
+                player.drop(itemStack2, false, Prediction.PREDICTED);
             }
 
             this.broadcastChanges();
@@ -311,4 +312,3 @@ public class WoodcutterMenu extends AbstractContainerMenu {
         this.access.execute((_, _) -> this.clearContainer(player, this.input));
     }
 }
-

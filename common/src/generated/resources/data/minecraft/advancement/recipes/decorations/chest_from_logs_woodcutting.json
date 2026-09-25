@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:chest_from_logs_woodcutting"
+        "recipes": "minecraft:chest_from_logs_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

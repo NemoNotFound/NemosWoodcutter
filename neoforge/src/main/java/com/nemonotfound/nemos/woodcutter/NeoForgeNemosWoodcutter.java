@@ -67,6 +67,8 @@ public class NeoForgeNemosWoodcutter {
             registerBuiltInBiomesOPlentyDataPack(event);
             registerBuiltInNemosMossyBlocksDataPack(event);
             registerBuiltInNemosVerticalSlabsDataPack(event);
+            registerBuiltInNemosVerticalSlabsBiomesOPlentyDataPack(event);
+            registerBuiltInNemosVerticalSlabsMossyBlocksDataPack(event);
         }
     }
 
@@ -109,6 +111,36 @@ public class NeoForgeNemosWoodcutter {
                 Identifier.fromNamespaceAndPath(MOD_ID, "resourcepacks/nemos_vertical_slabs"),
                 PackType.SERVER_DATA,
                 Component.literal("Nemo's Vertical Slabs"),
+                PackSource.BUILT_IN,
+                true,
+                Pack.Position.TOP
+        );
+    }
+
+    public static void registerBuiltInNemosVerticalSlabsBiomesOPlentyDataPack(AddPackFindersEvent event) {
+        if (!(Services.MOD_LOADER_HELPER.isModLoaded(NEMOS_VERTICAL_SLABS_MOD_ID) && Services.MOD_LOADER_HELPER.isModLoaded(BIOMES_O_PLENTY_MOD_ID))) {
+            return;
+        }
+
+        event.addPackFinders(
+                Identifier.fromNamespaceAndPath(MOD_ID, "resourcepacks/" + NEMOS_VERTICAL_SLABS_MOD_ID + "_" + BIOMES_O_PLENTY_MOD_ID),
+                PackType.SERVER_DATA,
+                Component.literal("Nemo's Vertical Slabs x Biomes O' Plenty"),
+                PackSource.BUILT_IN,
+                true,
+                Pack.Position.TOP
+        );
+    }
+
+    public static void registerBuiltInNemosVerticalSlabsMossyBlocksDataPack(AddPackFindersEvent event) {
+        if (!(Services.MOD_LOADER_HELPER.isModLoaded(NEMOS_VERTICAL_SLABS_MOD_ID) && Services.MOD_LOADER_HELPER.isModLoaded(NEMOS_MOSSY_BLOCKS_MOD_ID))) {
+            return;
+        }
+
+        event.addPackFinders(
+                Identifier.fromNamespaceAndPath(MOD_ID, "resourcepacks/" + NEMOS_VERTICAL_SLABS_MOD_ID + "_" + NEMOS_MOSSY_BLOCKS_MOD_ID),
+                PackType.SERVER_DATA,
+                Component.literal("Nemo's Vertical Slabs x Nemo's Mossy Blocks"),
                 PackSource.BUILT_IN,
                 true,
                 Pack.Position.TOP

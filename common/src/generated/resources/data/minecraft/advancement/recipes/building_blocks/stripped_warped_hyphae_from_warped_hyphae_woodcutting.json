@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:stripped_warped_hyphae_from_warped_hyphae_woodcutting"
+        "recipes": "minecraft:stripped_warped_hyphae_from_warped_hyphae_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

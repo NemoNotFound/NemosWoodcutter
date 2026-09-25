@@ -8,8 +8,6 @@ import com.nemonotfound.nemos.woodcutter.item.recipe.display.ModRecipeDisplaysFa
 import com.nemonotfound.nemos.woodcutter.platform.Services;
 import com.nemonotfound.nemos.woodcutter.screen.ModMenuTypesFabric;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
-import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.fabric.api.resource.v1.ResourceLoader;
 import net.fabricmc.fabric.api.resource.v1.pack.PackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
@@ -87,7 +85,7 @@ public class FabricNemosWoodcutter implements ModInitializer {
                 ResourceLoader.registerBuiltinPack(
                         Identifier.fromNamespaceAndPath(MOD_ID, NEMOS_VERTICAL_SLABS_MOD_ID + "_" + NEMOS_MOSSY_BLOCKS_MOD_ID),
                         container,
-                        Component.literal("Nemo's Vertical Slabs x Biomes O' Plenty"),
+                        Component.literal("Nemo's Vertical Slabs x Nemo's Mossy Blocks"),
                         PackActivationType.ALWAYS_ENABLED
                 ));
     }
@@ -97,7 +95,7 @@ public class FabricNemosWoodcutter implements ModInitializer {
                 ResourceLoader.registerBuiltinPack(
                         Identifier.fromNamespaceAndPath(MOD_ID, NEMOS_VERTICAL_SLABS_MOD_ID + "_" + BIOMES_O_PLENTY_MOD_ID),
                         container,
-                        Component.literal("Nemo's Vertical Slabs x Nemo's Mossy Blocks"),
+                        Component.literal("Nemo's Vertical Slabs x Biomes O' Plenty"),
                         PackActivationType.ALWAYS_ENABLED
                 ));
     }

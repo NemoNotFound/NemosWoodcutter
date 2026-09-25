@@ -4,10 +4,12 @@ import com.nemonotfound.nemos.vertical.slabs.world.item.VerticalSlabItems;
 import com.nemonotfound.nemos.woodcutter.platform.Services;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.advancements.Advancement;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Blocks;
 import org.jetbrains.annotations.NotNull;
@@ -25,8 +27,8 @@ public class NemosVerticalSlabsRecipeProvider extends FabricRecipeProvider {
     }
 
     @Override
-    protected @NotNull RecipeProvider createRecipeProvider(HolderLookup.@NonNull Provider provider, @NonNull RecipeOutput recipeOutput) {
-        return new WoodcutterRecipeProvider(provider, recipeOutput) {
+    protected @NotNull RecipeProvider createRecipeProvider(HolderLookup.@NonNull Provider provider, @NonNull BootstrapContext<Recipe<?>> recipeOutput, @NonNull BootstrapContext<Advancement> advancementOutput) {
+        return new WoodcutterRecipeProvider(recipeOutput, advancementOutput) {
 
             @Override
             public void buildRecipes() {

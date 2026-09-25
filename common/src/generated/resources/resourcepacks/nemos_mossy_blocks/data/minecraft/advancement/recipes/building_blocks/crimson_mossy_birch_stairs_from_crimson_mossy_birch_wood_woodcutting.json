@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "hasCrimsonMossyBirchWood": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#nemos_mossy_blocks:crimson_mossy_birch_wood"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "minecraft:crimson_mossy_birch_stairs_from_crimson_mossy_birch_wood_woodcutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "hasCrimsonMossyBirchWood"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:crimson_mossy_birch_stairs_from_crimson_mossy_birch_wood_woodcutting"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "hasMossyOakWood": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#nemos_mossy_blocks:mossy_oak_wood"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "minecraft:mossy_oak_door_from_mossy_oak_wood_woodcutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "hasMossyOakWood"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:mossy_oak_door_from_mossy_oak_wood_woodcutting"
+    ]
+  }
+}

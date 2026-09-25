@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:pale_oak_stairs_from_pale_oak_logs_woodcutting"
+        "recipes": "minecraft:pale_oak_stairs_from_pale_oak_logs_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

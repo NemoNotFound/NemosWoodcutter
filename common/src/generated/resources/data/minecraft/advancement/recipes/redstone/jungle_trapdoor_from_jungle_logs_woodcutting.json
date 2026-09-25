@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:jungle_trapdoor_from_jungle_logs_woodcutting"
+        "recipes": "minecraft:jungle_trapdoor_from_jungle_logs_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

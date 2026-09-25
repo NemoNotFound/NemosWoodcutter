@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_magic_logs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#biomesoplenty:magic_logs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "minecraft:magic_fence_from_magic_logs_woodcutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_magic_logs"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:magic_fence_from_magic_logs_woodcutting"
+    ]
+  }
+}

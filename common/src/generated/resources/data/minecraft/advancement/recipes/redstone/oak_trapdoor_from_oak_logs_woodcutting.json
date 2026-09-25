@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:oak_trapdoor_from_oak_logs_woodcutting"
+        "recipes": "minecraft:oak_trapdoor_from_oak_logs_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

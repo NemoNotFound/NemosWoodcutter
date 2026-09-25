@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "hasCrimsonMossyMangrove": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#nemos_mossy_blocks:crimson_mossy_mangrove_wood"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "minecraft:crimson_mossy_mangrove_pressure_plate_from_crimson_mossy_mangrove_wood_woodcutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "hasCrimsonMossyMangrove"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:crimson_mossy_mangrove_pressure_plate_from_crimson_mossy_mangrove_wood_woodcutting"
+    ]
+  }
+}

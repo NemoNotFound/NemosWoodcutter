@@ -16,10 +16,19 @@ dependencies {
     compileOnly("maven.modrinth:glitchcore:${glitchcore_version}-fabric")
     compileOnly("maven.modrinth:nemos-mossy-blocks:${nemos_mossy_blocks_version}-fabric")
     compileOnly("maven.modrinth:nemos-vertical-slabs:${nemos_vertical_slabs_version}-fabric")
+
+    localRuntime("maven.modrinth:biomes-o-plenty:${biomes_o_plenty_version}-fabric")
+    localRuntime("maven.modrinth:terrablender:${terrablender_version}-fabric")
+    localRuntime("maven.modrinth:glitchcore:${glitchcore_version}-fabric")
+    localRuntime("maven.modrinth:nemos-mossy-blocks:${nemos_mossy_blocks_version}-fabric")
+    localRuntime("maven.modrinth:nemos-vertical-slabs:${nemos_vertical_slabs_version}-fabric")
 }
 
 fabricApi {
-    configureDataGeneration()
+    configureDataGeneration {
+        outputDirectory = project(':common').file('src/generated/resources/')
+        modId = project.mod_id
+    }
 }
 
 base {
@@ -61,19 +70,8 @@ loom {
             ideConfigGenerated(true)
             runDir('runs/server')
         }
-        datagen {
-            inherit client
-            name "Data Generation"
-            vmArg "-Dfabric-api.datagen"
-            vmArg "-Dfabric-api.datagen.output-dir=${project(':common').file('src/generated/resources/')}"
-            vmArg "-Dfabric-api.datagen.modid=${mod_id}"
-
-            runDir "build/datagen"
-        }
     }
 }
-
-sourceSets.main.resources { srcDir project.project(':common').file('src/generated/resources/').getAbsolutePath() }
 
 tasks.register('publishCurseForge', TaskPublishCurseForge) {
     dependsOn(tasks.jar)
