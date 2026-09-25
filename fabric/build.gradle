@@ -3,7 +3,8 @@ import net.darkhax.curseforgegradle.TaskPublishCurseForge
 plugins {
     id 'multiloader-loader'
     id 'net.fabricmc.fabric-loom'
-    id("com.modrinth.minotaur")
+    id 'net.darkhax.curseforgegradle'
+    id 'com.modrinth.minotaur'
 }
 
 dependencies {

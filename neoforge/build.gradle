@@ -3,7 +3,8 @@ import net.darkhax.curseforgegradle.TaskPublishCurseForge
 plugins {
     id 'multiloader-loader'
     id 'net.neoforged.moddev'
-    id("com.modrinth.minotaur")
+    id 'net.darkhax.curseforgegradle'
+    id 'com.modrinth.minotaur'
 }
 
 base {
