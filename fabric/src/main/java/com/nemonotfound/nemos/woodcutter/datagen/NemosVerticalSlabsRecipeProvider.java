@@ -51,6 +51,8 @@ public class NemosVerticalSlabsRecipeProvider extends FabricRecipeProvider {
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, Blocks.OAK_PLANKS, VerticalSlabItems.OAK_VERTICAL_SLAB, 2);
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, Blocks.SPRUCE_PLANKS, VerticalSlabItems.SPRUCE_VERTICAL_SLAB, 2);
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, Blocks.WARPED_PLANKS, VerticalSlabItems.WARPED_VERTICAL_SLAB, 2);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, ItemTags.ACACIA_LOGS, "acacia_logs", VerticalSlabItems.ACACIA_VERTICAL_SLAB, 8);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, Blocks.BAMBOO_PLANKS, VerticalSlabItems.BAMBOO_MOSAIC_VERTICAL_SLAB, 2);
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, ItemTags.BAMBOO_BLOCKS, "bamboo_blocks", VerticalSlabItems.BAMBOO_MOSAIC_VERTICAL_SLAB, 2);
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, ItemTags.BAMBOO_BLOCKS, "bamboo_blocks", VerticalSlabItems.BAMBOO_VERTICAL_SLAB, 8);
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, ItemTags.BIRCH_LOGS, "birch_logs", VerticalSlabItems.BIRCH_VERTICAL_SLAB, 8);

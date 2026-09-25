@@ -62,6 +62,29 @@ public class NemosMossyBlocksRecipeProvider extends FabricRecipeProvider {
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.MOSSY_OAK_PLANKS, MossyItems.MOSSY_OAK_STAIRS);
                 createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, MossyBlocks.MOSSY_OAK_PLANKS, MossyItems.MOSSY_OAK_TRAPDOOR, 2);
 
+                var hasMossyPaleOakWoodCriteria = "hasMossyPaleOakWood";
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.MOSSY_PALE_OAK_WOOD, hasMossyPaleOakWoodCriteria, MossyItems.MOSSY_PALE_OAK_PLANKS, 4);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, NemosMossyItemTags.MOSSY_PALE_OAK_WOOD, hasMossyPaleOakWoodCriteria, MossyItems.MOSSY_PALE_OAK_BUTTON, 16);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, NemosMossyItemTags.MOSSY_PALE_OAK_WOOD, hasMossyPaleOakWoodCriteria, MossyItems.MOSSY_PALE_OAK_DOOR, 4);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, modDependencies, NemosMossyItemTags.MOSSY_PALE_OAK_WOOD, hasMossyPaleOakWoodCriteria, MossyItems.MOSSY_PALE_OAK_FENCE_GATE, 4);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, modDependencies, NemosMossyItemTags.MOSSY_PALE_OAK_WOOD, hasMossyPaleOakWoodCriteria, MossyItems.MOSSY_PALE_OAK_FENCE, 4);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, NemosMossyItemTags.MOSSY_PALE_OAK_WOOD, hasMossyPaleOakWoodCriteria, MossyItems.MOSSY_PALE_OAK_PRESSURE_PLATE, 16);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.MOSSY_PALE_OAK_WOOD, hasMossyPaleOakWoodCriteria, MossyItems.MOSSY_PALE_OAK_SLAB, 8);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.MOSSY_PALE_OAK_WOOD, hasMossyPaleOakWoodCriteria, MossyItems.MOSSY_PALE_OAK_STAIRS, 4);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, NemosMossyItemTags.MOSSY_PALE_OAK_WOOD, hasMossyPaleOakWoodCriteria, MossyItems.MOSSY_PALE_OAK_TRAPDOOR, 8);
+
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.MOSSY_PALE_OAK_LOG, Items.STRIPPED_PALE_OAK_LOG);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.MOSSY_PALE_OAK_WOOD, Items.STRIPPED_PALE_OAK_WOOD);
+
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, MossyBlocks.MOSSY_PALE_OAK_PLANKS, MossyItems.MOSSY_PALE_OAK_BUTTON, 4);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, MossyBlocks.MOSSY_PALE_OAK_PLANKS, 2, MossyItems.MOSSY_PALE_OAK_DOOR, 2);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, MossyBlocks.MOSSY_PALE_OAK_PLANKS, MossyItems.MOSSY_PALE_OAK_FENCE_GATE);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, modDependencies, MossyBlocks.MOSSY_PALE_OAK_PLANKS, MossyItems.MOSSY_PALE_OAK_FENCE);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, MossyBlocks.MOSSY_PALE_OAK_PLANKS, MossyItems.MOSSY_PALE_OAK_PRESSURE_PLATE, 4);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.MOSSY_PALE_OAK_PLANKS, MossyItems.MOSSY_PALE_OAK_SLAB, 2);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.MOSSY_PALE_OAK_PLANKS, MossyItems.MOSSY_PALE_OAK_STAIRS);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, MossyBlocks.MOSSY_PALE_OAK_PLANKS, MossyItems.MOSSY_PALE_OAK_TRAPDOOR, 2);
+
                 var hasMossySpruceWoodCriteria = "hasMossySpruceWood";
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.MOSSY_SPRUCE_WOOD, hasMossySpruceWoodCriteria, MossyItems.MOSSY_SPRUCE_PLANKS, 4);
                 createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, NemosMossyItemTags.MOSSY_SPRUCE_WOOD, hasMossySpruceWoodCriteria, MossyItems.MOSSY_SPRUCE_BUTTON, 16);
@@ -319,6 +342,29 @@ public class NemosMossyBlocksRecipeProvider extends FabricRecipeProvider {
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.PALE_MOSSY_OAK_PLANKS, MossyItems.PALE_MOSSY_OAK_SLAB, 2);
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.PALE_MOSSY_OAK_PLANKS, MossyItems.PALE_MOSSY_OAK_STAIRS);
                 createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, MossyBlocks.PALE_MOSSY_OAK_PLANKS, MossyItems.PALE_MOSSY_OAK_TRAPDOOR, 2);
+
+                var hasPaleMossyPaleOakWoodCriteria = "hasPaleMossyPaleOakWood";
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.PALE_MOSSY_PALE_OAK_WOOD, hasPaleMossyPaleOakWoodCriteria, MossyItems.PALE_MOSSY_PALE_OAK_PLANKS, 4);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, NemosMossyItemTags.PALE_MOSSY_PALE_OAK_WOOD, hasPaleMossyPaleOakWoodCriteria, MossyItems.PALE_MOSSY_PALE_OAK_BUTTON, 16);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, NemosMossyItemTags.PALE_MOSSY_PALE_OAK_WOOD, hasPaleMossyPaleOakWoodCriteria, MossyItems.PALE_MOSSY_PALE_OAK_DOOR, 4);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, modDependencies, NemosMossyItemTags.PALE_MOSSY_PALE_OAK_WOOD, hasPaleMossyPaleOakWoodCriteria, MossyItems.PALE_MOSSY_PALE_OAK_FENCE_GATE, 4);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, modDependencies, NemosMossyItemTags.PALE_MOSSY_PALE_OAK_WOOD, hasPaleMossyPaleOakWoodCriteria, MossyItems.PALE_MOSSY_PALE_OAK_FENCE, 4);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, NemosMossyItemTags.PALE_MOSSY_PALE_OAK_WOOD, hasPaleMossyPaleOakWoodCriteria, MossyItems.PALE_MOSSY_PALE_OAK_PRESSURE_PLATE, 16);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.PALE_MOSSY_PALE_OAK_WOOD, hasPaleMossyPaleOakWoodCriteria, MossyItems.PALE_MOSSY_PALE_OAK_SLAB, 8);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.PALE_MOSSY_PALE_OAK_WOOD, hasPaleMossyPaleOakWoodCriteria, MossyItems.PALE_MOSSY_PALE_OAK_STAIRS, 4);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, NemosMossyItemTags.PALE_MOSSY_PALE_OAK_WOOD, hasPaleMossyPaleOakWoodCriteria, MossyItems.PALE_MOSSY_PALE_OAK_TRAPDOOR, 8);
+
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.PALE_MOSSY_PALE_OAK_LOG, Items.STRIPPED_PALE_OAK_LOG);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.PALE_MOSSY_PALE_OAK_WOOD, Items.STRIPPED_PALE_OAK_WOOD);
+
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, MossyBlocks.PALE_MOSSY_PALE_OAK_PLANKS, MossyItems.PALE_MOSSY_PALE_OAK_BUTTON, 4);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, MossyBlocks.PALE_MOSSY_PALE_OAK_PLANKS, 2, MossyItems.PALE_MOSSY_PALE_OAK_DOOR, 2);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, MossyBlocks.PALE_MOSSY_PALE_OAK_PLANKS, MossyItems.PALE_MOSSY_PALE_OAK_FENCE_GATE);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, modDependencies, MossyBlocks.PALE_MOSSY_PALE_OAK_PLANKS, MossyItems.PALE_MOSSY_PALE_OAK_FENCE);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, MossyBlocks.PALE_MOSSY_PALE_OAK_PLANKS, MossyItems.PALE_MOSSY_PALE_OAK_PRESSURE_PLATE, 4);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.PALE_MOSSY_PALE_OAK_PLANKS, MossyItems.PALE_MOSSY_PALE_OAK_SLAB, 2);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.PALE_MOSSY_PALE_OAK_PLANKS, MossyItems.PALE_MOSSY_PALE_OAK_STAIRS);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, MossyBlocks.PALE_MOSSY_PALE_OAK_PLANKS, MossyItems.PALE_MOSSY_PALE_OAK_TRAPDOOR, 2);
 
                 var hasPaleMossySpruceWoodCriteria = "hasPaleMossySpruceWood";
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.PALE_MOSSY_SPRUCE_WOOD, hasPaleMossySpruceWoodCriteria, MossyItems.PALE_MOSSY_SPRUCE_PLANKS, 4);
@@ -578,6 +624,29 @@ public class NemosMossyBlocksRecipeProvider extends FabricRecipeProvider {
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.CRIMSON_MOSSY_OAK_PLANKS, MossyItems.CRIMSON_MOSSY_OAK_STAIRS);
                 createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, MossyBlocks.CRIMSON_MOSSY_OAK_PLANKS, MossyItems.CRIMSON_MOSSY_OAK_TRAPDOOR, 2);
 
+                var hasCrimsonMossyPaleOakWoodCriteria = "hasCrimsonMossyPaleOakWood";
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.CRIMSON_MOSSY_PALE_OAK_WOOD, hasCrimsonMossyPaleOakWoodCriteria, MossyItems.CRIMSON_MOSSY_PALE_OAK_PLANKS, 4);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, NemosMossyItemTags.CRIMSON_MOSSY_PALE_OAK_WOOD, hasCrimsonMossyPaleOakWoodCriteria, MossyItems.CRIMSON_MOSSY_PALE_OAK_BUTTON, 16);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, NemosMossyItemTags.CRIMSON_MOSSY_PALE_OAK_WOOD, hasCrimsonMossyPaleOakWoodCriteria, MossyItems.CRIMSON_MOSSY_PALE_OAK_DOOR, 4);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, modDependencies, NemosMossyItemTags.CRIMSON_MOSSY_PALE_OAK_WOOD, hasCrimsonMossyPaleOakWoodCriteria, MossyItems.CRIMSON_MOSSY_PALE_OAK_FENCE_GATE, 4);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, modDependencies, NemosMossyItemTags.CRIMSON_MOSSY_PALE_OAK_WOOD, hasCrimsonMossyPaleOakWoodCriteria, MossyItems.CRIMSON_MOSSY_PALE_OAK_FENCE, 4);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, NemosMossyItemTags.CRIMSON_MOSSY_PALE_OAK_WOOD, hasCrimsonMossyPaleOakWoodCriteria, MossyItems.CRIMSON_MOSSY_PALE_OAK_PRESSURE_PLATE, 16);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.CRIMSON_MOSSY_PALE_OAK_WOOD, hasCrimsonMossyPaleOakWoodCriteria, MossyItems.CRIMSON_MOSSY_PALE_OAK_SLAB, 8);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.CRIMSON_MOSSY_PALE_OAK_WOOD, hasCrimsonMossyPaleOakWoodCriteria, MossyItems.CRIMSON_MOSSY_PALE_OAK_STAIRS, 4);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, NemosMossyItemTags.CRIMSON_MOSSY_PALE_OAK_WOOD, hasCrimsonMossyPaleOakWoodCriteria, MossyItems.CRIMSON_MOSSY_PALE_OAK_TRAPDOOR, 8);
+
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.CRIMSON_MOSSY_PALE_OAK_LOG, Items.STRIPPED_PALE_OAK_LOG);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.CRIMSON_MOSSY_PALE_OAK_WOOD, Items.STRIPPED_PALE_OAK_WOOD);
+
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, MossyBlocks.CRIMSON_MOSSY_PALE_OAK_PLANKS, MossyItems.CRIMSON_MOSSY_PALE_OAK_BUTTON, 4);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, MossyBlocks.CRIMSON_MOSSY_PALE_OAK_PLANKS, 2, MossyItems.CRIMSON_MOSSY_PALE_OAK_DOOR, 2);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, MossyBlocks.CRIMSON_MOSSY_PALE_OAK_PLANKS, MossyItems.CRIMSON_MOSSY_PALE_OAK_FENCE_GATE);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, modDependencies, MossyBlocks.CRIMSON_MOSSY_PALE_OAK_PLANKS, MossyItems.CRIMSON_MOSSY_PALE_OAK_FENCE);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, MossyBlocks.CRIMSON_MOSSY_PALE_OAK_PLANKS, MossyItems.CRIMSON_MOSSY_PALE_OAK_PRESSURE_PLATE, 4);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.CRIMSON_MOSSY_PALE_OAK_PLANKS, MossyItems.CRIMSON_MOSSY_PALE_OAK_SLAB, 2);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.CRIMSON_MOSSY_PALE_OAK_PLANKS, MossyItems.CRIMSON_MOSSY_PALE_OAK_STAIRS);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, MossyBlocks.CRIMSON_MOSSY_PALE_OAK_PLANKS, MossyItems.CRIMSON_MOSSY_PALE_OAK_TRAPDOOR, 2);
+
                 var hasCrimsonMossySpruceWoodCriteria = "hasCrimsonMossySpruceWood";
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.CRIMSON_MOSSY_SPRUCE_WOOD, hasCrimsonMossySpruceWoodCriteria, MossyItems.CRIMSON_MOSSY_SPRUCE_PLANKS, 4);
                 createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, NemosMossyItemTags.CRIMSON_MOSSY_SPRUCE_WOOD, hasCrimsonMossySpruceWoodCriteria, MossyItems.CRIMSON_MOSSY_SPRUCE_BUTTON, 16);
@@ -835,6 +904,29 @@ public class NemosMossyBlocksRecipeProvider extends FabricRecipeProvider {
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.WARPED_MOSSY_OAK_PLANKS, MossyItems.WARPED_MOSSY_OAK_SLAB, 2);
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.WARPED_MOSSY_OAK_PLANKS, MossyItems.WARPED_MOSSY_OAK_STAIRS);
                 createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, MossyBlocks.WARPED_MOSSY_OAK_PLANKS, MossyItems.WARPED_MOSSY_OAK_TRAPDOOR, 2);
+
+                var hasWarpedMossyPaleOakWoodCriteria = "hasWarpedMossyPaleOakWood";
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.WARPED_MOSSY_PALE_OAK_WOOD, hasWarpedMossyPaleOakWoodCriteria, MossyItems.WARPED_MOSSY_PALE_OAK_PLANKS, 4);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, NemosMossyItemTags.WARPED_MOSSY_PALE_OAK_WOOD, hasWarpedMossyPaleOakWoodCriteria, MossyItems.WARPED_MOSSY_PALE_OAK_BUTTON, 16);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, NemosMossyItemTags.WARPED_MOSSY_PALE_OAK_WOOD, hasWarpedMossyPaleOakWoodCriteria, MossyItems.WARPED_MOSSY_PALE_OAK_DOOR, 4);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, modDependencies, NemosMossyItemTags.WARPED_MOSSY_PALE_OAK_WOOD, hasWarpedMossyPaleOakWoodCriteria, MossyItems.WARPED_MOSSY_PALE_OAK_FENCE_GATE, 4);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, modDependencies, NemosMossyItemTags.WARPED_MOSSY_PALE_OAK_WOOD, hasWarpedMossyPaleOakWoodCriteria, MossyItems.WARPED_MOSSY_PALE_OAK_FENCE, 4);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, NemosMossyItemTags.WARPED_MOSSY_PALE_OAK_WOOD, hasWarpedMossyPaleOakWoodCriteria, MossyItems.WARPED_MOSSY_PALE_OAK_PRESSURE_PLATE, 16);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.WARPED_MOSSY_PALE_OAK_WOOD, hasWarpedMossyPaleOakWoodCriteria, MossyItems.WARPED_MOSSY_PALE_OAK_SLAB, 8);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.WARPED_MOSSY_PALE_OAK_WOOD, hasWarpedMossyPaleOakWoodCriteria, MossyItems.WARPED_MOSSY_PALE_OAK_STAIRS, 4);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, NemosMossyItemTags.WARPED_MOSSY_PALE_OAK_WOOD, hasWarpedMossyPaleOakWoodCriteria, MossyItems.WARPED_MOSSY_PALE_OAK_TRAPDOOR, 8);
+
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.WARPED_MOSSY_PALE_OAK_LOG, Items.STRIPPED_PALE_OAK_LOG);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.WARPED_MOSSY_PALE_OAK_WOOD, Items.STRIPPED_PALE_OAK_WOOD);
+
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, MossyBlocks.WARPED_MOSSY_PALE_OAK_PLANKS, MossyItems.WARPED_MOSSY_PALE_OAK_BUTTON, 4);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, MossyBlocks.WARPED_MOSSY_PALE_OAK_PLANKS, 2, MossyItems.WARPED_MOSSY_PALE_OAK_DOOR, 2);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, MossyBlocks.WARPED_MOSSY_PALE_OAK_PLANKS, MossyItems.WARPED_MOSSY_PALE_OAK_FENCE_GATE);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, modDependencies, MossyBlocks.WARPED_MOSSY_PALE_OAK_PLANKS, MossyItems.WARPED_MOSSY_PALE_OAK_FENCE);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, MossyBlocks.WARPED_MOSSY_PALE_OAK_PLANKS, MossyItems.WARPED_MOSSY_PALE_OAK_PRESSURE_PLATE, 4);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.WARPED_MOSSY_PALE_OAK_PLANKS, MossyItems.WARPED_MOSSY_PALE_OAK_SLAB, 2);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.WARPED_MOSSY_PALE_OAK_PLANKS, MossyItems.WARPED_MOSSY_PALE_OAK_STAIRS);
+                createWoodcuttingRecipe(RecipeCategory.REDSTONE, modDependencies, MossyBlocks.WARPED_MOSSY_PALE_OAK_PLANKS, MossyItems.WARPED_MOSSY_PALE_OAK_TRAPDOOR, 2);
 
                 var hasWarpedMossySpruceWoodCriteria = "hasWarpedMossySpruceWood";
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.WARPED_MOSSY_SPRUCE_WOOD, hasWarpedMossySpruceWoodCriteria, MossyItems.WARPED_MOSSY_SPRUCE_PLANKS, 4);

@@ -43,6 +43,10 @@ public class NemosVerticalSlabsMossyBlocksRecipeProvider extends FabricRecipePro
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.MOSSY_OAK_WOOD, hasMossyOakWoodCriteria, VerticalSlabItems.MOSSY_OAK_VERTICAL_SLAB, 8);
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.MOSSY_OAK_PLANKS, VerticalSlabItems.MOSSY_OAK_VERTICAL_SLAB, 2);
 
+                var hasMossyPaleOakWoodCriteria = "hasMossyPaleOakWood";
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.MOSSY_PALE_OAK_WOOD, hasMossyPaleOakWoodCriteria, VerticalSlabItems.MOSSY_PALE_OAK_VERTICAL_SLAB, 8);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.MOSSY_PALE_OAK_PLANKS, VerticalSlabItems.MOSSY_PALE_OAK_VERTICAL_SLAB, 2);
+
                 var hasMossySpruceWoodCriteria = "hasMossySpruceWood";
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.MOSSY_SPRUCE_WOOD, hasMossySpruceWoodCriteria, VerticalSlabItems.MOSSY_SPRUCE_VERTICAL_SLAB, 8);
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.MOSSY_SPRUCE_PLANKS, VerticalSlabItems.MOSSY_SPRUCE_VERTICAL_SLAB, 2);
@@ -88,6 +92,10 @@ public class NemosVerticalSlabsMossyBlocksRecipeProvider extends FabricRecipePro
                 var hasPaleMossyOakWoodCriteria = "hasPaleMossyOakWood";
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.PALE_MOSSY_OAK_WOOD, hasPaleMossyOakWoodCriteria, VerticalSlabItems.PALE_MOSSY_OAK_VERTICAL_SLAB, 8);
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.PALE_MOSSY_OAK_PLANKS, VerticalSlabItems.PALE_MOSSY_OAK_VERTICAL_SLAB, 2);
+
+                var hasPaleMossyPaleOakWoodCriteria = "hasPaleMossyPaleOakWood";
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.PALE_MOSSY_PALE_OAK_WOOD, hasPaleMossyPaleOakWoodCriteria, VerticalSlabItems.PALE_MOSSY_PALE_OAK_VERTICAL_SLAB, 8);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.PALE_MOSSY_PALE_OAK_PLANKS, VerticalSlabItems.PALE_MOSSY_PALE_OAK_VERTICAL_SLAB, 2);
 
                 var hasPaleMossySpruceWoodCriteria = "hasPaleMossySpruceWood";
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.PALE_MOSSY_SPRUCE_WOOD, hasPaleMossySpruceWoodCriteria, VerticalSlabItems.PALE_MOSSY_SPRUCE_VERTICAL_SLAB, 8);
@@ -135,6 +143,10 @@ public class NemosVerticalSlabsMossyBlocksRecipeProvider extends FabricRecipePro
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.CRIMSON_MOSSY_OAK_WOOD, hasCrimsonMossyOakWoodCriteria, VerticalSlabItems.CRIMSON_MOSSY_OAK_VERTICAL_SLAB, 8);
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.CRIMSON_MOSSY_OAK_PLANKS, VerticalSlabItems.CRIMSON_MOSSY_OAK_VERTICAL_SLAB, 2);
 
+                var hasCrimsonMossyPaleOakWoodCriteria = "hasCrimsonMossyPaleOakWood";
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.CRIMSON_MOSSY_PALE_OAK_WOOD, hasCrimsonMossyPaleOakWoodCriteria, VerticalSlabItems.CRIMSON_MOSSY_PALE_OAK_VERTICAL_SLAB, 8);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.CRIMSON_MOSSY_PALE_OAK_PLANKS, VerticalSlabItems.CRIMSON_MOSSY_PALE_OAK_VERTICAL_SLAB, 2);
+
                 var hasCrimsonMossySpruceWoodCriteria = "hasCrimsonMossySpruceWood";
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.CRIMSON_MOSSY_SPRUCE_WOOD, hasCrimsonMossySpruceWoodCriteria, VerticalSlabItems.CRIMSON_MOSSY_SPRUCE_VERTICAL_SLAB, 8);
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.CRIMSON_MOSSY_SPRUCE_PLANKS, VerticalSlabItems.CRIMSON_MOSSY_SPRUCE_VERTICAL_SLAB, 2);
@@ -180,6 +192,10 @@ public class NemosVerticalSlabsMossyBlocksRecipeProvider extends FabricRecipePro
                 var hasWarpedMossyOakWoodCriteria = "hasWarpedMossyOakWood";
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.WARPED_MOSSY_OAK_WOOD, hasWarpedMossyOakWoodCriteria, VerticalSlabItems.WARPED_MOSSY_OAK_VERTICAL_SLAB, 8);
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.WARPED_MOSSY_OAK_PLANKS, VerticalSlabItems.WARPED_MOSSY_OAK_VERTICAL_SLAB, 2);
+
+                var hasWarpedMossyPaleOakWoodCriteria = "hasWarpedMossyPaleOakWood";
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.WARPED_MOSSY_PALE_OAK_WOOD, hasWarpedMossyPaleOakWoodCriteria, VerticalSlabItems.WARPED_MOSSY_PALE_OAK_VERTICAL_SLAB, 8);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, MossyBlocks.WARPED_MOSSY_PALE_OAK_PLANKS, VerticalSlabItems.WARPED_MOSSY_PALE_OAK_VERTICAL_SLAB, 2);
 
                 var hasWarpedMossySpruceWoodCriteria = "hasWarpedMossySpruceWood";
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, modDependencies, NemosMossyItemTags.WARPED_MOSSY_SPRUCE_WOOD, hasWarpedMossySpruceWoodCriteria, VerticalSlabItems.WARPED_MOSSY_SPRUCE_VERTICAL_SLAB, 8);

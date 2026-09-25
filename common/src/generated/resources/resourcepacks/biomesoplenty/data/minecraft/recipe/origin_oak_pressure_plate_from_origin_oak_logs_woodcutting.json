@@ -1,0 +1,12 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "#biomesoplenty:origin_oak_logs",
+  "inputCount": 1,
+  "modDependencies": [
+    "biomesoplenty"
+  ],
+  "result": {
+    "count": 16,
+    "id": "biomesoplenty:origin_oak_pressure_plate"
+  }
+}

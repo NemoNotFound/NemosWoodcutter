@@ -30,6 +30,33 @@ public class WoodcuttingRecipeProvider extends FabricRecipeProvider {
             public void buildRecipes() {
                 createWoodCutterRecipe();
 
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.ACACIA_LOG, Items.ACACIA_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.STRIPPED_ACACIA_LOG, Items.ACACIA_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.BAMBOO_BLOCK, Items.BAMBOO_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.STRIPPED_BAMBOO_BLOCK, Items.BAMBOO_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.BIRCH_LOG, Items.BIRCH_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.STRIPPED_BIRCH_LOG, Items.BIRCH_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.CHERRY_LOG, Items.CHERRY_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.STRIPPED_CHERRY_LOG, Items.CHERRY_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.PALE_OAK_LOG, Items.PALE_OAK_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.STRIPPED_PALE_OAK_LOG, Items.PALE_OAK_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.CRIMSON_STEM, Items.CRIMSON_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.STRIPPED_CRIMSON_STEM, Items.CRIMSON_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.DARK_OAK_LOG, Items.DARK_OAK_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.STRIPPED_DARK_OAK_LOG, Items.DARK_OAK_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.JUNGLE_LOG, Items.JUNGLE_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.STRIPPED_JUNGLE_LOG, Items.JUNGLE_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.MANGROVE_LOG, Items.MANGROVE_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.STRIPPED_MANGROVE_LOG, Items.MANGROVE_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.OAK_LOG, Items.OAK_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.STRIPPED_OAK_LOG, Items.OAK_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.SPRUCE_LOG, Items.SPRUCE_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.STRIPPED_SPRUCE_LOG, Items.SPRUCE_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.WARPED_STEM, Items.WARPED_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.STRIPPED_WARPED_STEM, Items.WARPED_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.POPLAR_LOG, Items.POPLAR_SHELF);
+                createWoodcuttingRecipe(RecipeCategory.DECORATIONS, Blocks.STRIPPED_POPLAR_LOG, Items.POPLAR_SHELF);
+
                 createWoodcuttingRecipe(RecipeCategory.DECORATIONS, ItemTags.PLANKS, "has_planks", Items.COMPOSTER);
                 createWoodcuttingRecipe(RecipeCategory.DECORATIONS, ItemTags.LOGS, "has_planks", Items.COMPOSTER, 4);
                 createWoodcuttingRecipe(RecipeCategory.DECORATIONS, ItemTags.PLANKS, "has_planks", Items.CRAFTING_TABLE);

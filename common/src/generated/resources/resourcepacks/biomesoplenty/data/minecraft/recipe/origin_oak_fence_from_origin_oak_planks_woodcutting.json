@@ -1,0 +1,11 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "biomesoplenty:origin_oak_planks",
+  "inputCount": 1,
+  "modDependencies": [
+    "biomesoplenty"
+  ],
+  "result": {
+    "id": "biomesoplenty:origin_oak_fence"
+  }
+}

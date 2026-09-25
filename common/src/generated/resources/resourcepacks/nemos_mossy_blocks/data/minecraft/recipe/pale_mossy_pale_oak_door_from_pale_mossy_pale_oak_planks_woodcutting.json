@@ -1,0 +1,12 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "nemos_mossy_blocks:pale_mossy_pale_oak_planks",
+  "inputCount": 2,
+  "modDependencies": [
+    "nemos_mossy_blocks"
+  ],
+  "result": {
+    "count": 2,
+    "id": "nemos_mossy_blocks:pale_mossy_pale_oak_door"
+  }
+}

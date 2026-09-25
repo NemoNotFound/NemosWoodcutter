@@ -1,0 +1,11 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "biomesoplenty:stripped_maple_log",
+  "inputCount": 1,
+  "modDependencies": [
+    "biomesoplenty"
+  ],
+  "result": {
+    "id": "biomesoplenty:maple_shelf"
+  }
+}

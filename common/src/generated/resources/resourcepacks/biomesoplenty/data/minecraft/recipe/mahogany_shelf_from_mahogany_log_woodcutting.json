@@ -1,0 +1,11 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "biomesoplenty:mahogany_log",
+  "inputCount": 1,
+  "modDependencies": [
+    "biomesoplenty"
+  ],
+  "result": {
+    "id": "biomesoplenty:mahogany_shelf"
+  }
+}
