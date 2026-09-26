@@ -1,0 +1,8 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "minecraft:poplar_planks",
+  "inputCount": 1,
+  "result": {
+    "id": "minecraft:poplar_fence"
+  }
+}

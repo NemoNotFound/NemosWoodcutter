@@ -1,4 +1,4 @@
-# Changelog - v1.14.2
+# Changelog - v1.14.3
 
 ## Additions
-- Added missing vanilla and mod recipes
+- Added missing poplar woodcutting recipes.

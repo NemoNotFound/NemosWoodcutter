@@ -1,0 +1,8 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "minecraft:poplar_wood",
+  "inputCount": 1,
+  "result": {
+    "id": "minecraft:stripped_poplar_wood"
+  }
+}
