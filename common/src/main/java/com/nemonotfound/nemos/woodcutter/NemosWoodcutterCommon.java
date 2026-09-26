@@ -1,6 +1,7 @@
 package com.nemonotfound.nemos.woodcutter;
 
 import com.nemonotfound.nemos.woodcutter.world.item.WoodcutterItems;
+import com.nemonotfound.nemos.woodcutter.world.item.WoodcutterCreativeModeTabs;
 import com.nemonotfound.nemos.woodcutter.world.level.block.WoodcutterBlocks;
 
 public class NemosWoodcutterCommon {
@@ -10,5 +11,6 @@ public class NemosWoodcutterCommon {
 
         WoodcutterBlocks.init();
         WoodcutterItems.init();
+        WoodcutterCreativeModeTabs.init();
     }
 }

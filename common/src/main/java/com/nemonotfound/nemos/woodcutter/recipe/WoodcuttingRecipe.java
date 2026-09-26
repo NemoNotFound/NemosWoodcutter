@@ -18,26 +18,26 @@ public class WoodcuttingRecipe extends SingleWithCountRecipe {
 
     public static final MapCodec<WoodcuttingRecipe> MAP_CODEC = simpleMapCodec(WoodcuttingRecipe::new);
     public static final StreamCodec<RegistryFriendlyByteBuf, WoodcuttingRecipe> STREAM_CODEC = simpleStreamCodec(WoodcuttingRecipe::new);
-    public static final RecipeSerializer<WoodcuttingRecipe> SERIALIZER = new RecipeSerializer<>(MAP_CODEC, STREAM_CODEC);
+    public static final RecipeSerializer<@NotNull WoodcuttingRecipe> SERIALIZER = new RecipeSerializer<>(MAP_CODEC, STREAM_CODEC);
 
     public WoodcuttingRecipe(Recipe.CommonInfo commonInfo, String group, List<String> modDependencies, Ingredient ingredient, int inputCount, ItemStackTemplate result) {
         super(commonInfo, group, modDependencies, ingredient, inputCount, result);
     }
 
     @Override
-    public @NotNull RecipeSerializer<WoodcuttingRecipe> getSerializer() {
+    public @NotNull RecipeSerializer<@NotNull WoodcuttingRecipe> getSerializer() {
         return SERIALIZER;
     }
 
     @Override
-    public @NotNull RecipeType<WoodcuttingRecipe> getType() {
+    public @NotNull RecipeType<@NotNull WoodcuttingRecipe> getType() {
         return WoodcutterRecipeTypes.WOODCUTTING.get();
     }
 
     @Override
     public @NotNull List<RecipeDisplay> display() {
         return List.of(new WoodcutterRecipeDisplay(this.ingredient().display(), this.createResultDisplay(),
-                new SlotDisplay.ItemSlotDisplay(WoodcutterItems.WOODCUTTER.get())));
+                new SlotDisplay.ItemSlotDisplay(WoodcutterItems.WOODCUTTERS.oak().get())));
     }
 
     public SlotDisplay createResultDisplay() {

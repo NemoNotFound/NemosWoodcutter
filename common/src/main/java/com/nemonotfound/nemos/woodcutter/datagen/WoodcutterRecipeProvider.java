@@ -2,13 +2,13 @@ package com.nemonotfound.nemos.woodcutter.datagen;
 
 import com.nemonotfound.nemos.woodcutter.recipe.WoodcuttingRecipeJsonBuilder;
 import com.nemonotfound.nemos.woodcutter.world.level.block.WoodcutterBlocks;
+import com.nemonotfound.nemos.woodcutter.world.level.block.WoodcutterVariant;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.recipes.RecipeBuilder;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.worldgen.BootstrapContext;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -143,7 +143,7 @@ public abstract class WoodcutterRecipeProvider extends RecipeProvider {
         Ingredient ingredient = Ingredient.of(input);
         String inputName = BuiltInRegistries.ITEM.getKey(input.asItem()).getPath();
 
-        var recipeBuilder= WoodcuttingRecipeJsonBuilder.createWoodcutting(recipeCategory, ingredient, inputCount, result, outputCount)
+        var recipeBuilder = WoodcuttingRecipeJsonBuilder.createWoodcutting(recipeCategory, ingredient, inputCount, result, outputCount)
                 .modDependencies(modDependencies)
                 .unlockedBy(getHasName(input), this.has(input));
 
@@ -154,7 +154,7 @@ public abstract class WoodcutterRecipeProvider extends RecipeProvider {
         Ingredient ingredient = Ingredient.of(input);
         String inputName = BuiltInRegistries.ITEM.getKey(input.asItem()).getPath();
 
-        var recipeBuilder= WoodcuttingRecipeJsonBuilder.createWoodcutting(recipeCategory, ingredient, inputCount, result, outputCount)
+        var recipeBuilder = WoodcuttingRecipeJsonBuilder.createWoodcutting(recipeCategory, ingredient, inputCount, result, outputCount)
                 .unlockedBy(getHasName(input), this.has(input));
 
         saveWoodcutting(recipeBuilder, result, inputName);
@@ -169,12 +169,15 @@ public abstract class WoodcutterRecipeProvider extends RecipeProvider {
     }
 
     protected void createWoodCutterRecipe() {
-        this.shaped(RecipeCategory.DECORATIONS, WoodcutterBlocks.WOODCUTTER.get())
-                .define('I', Items.IRON_INGOT)
-                .define('#', ItemTags.LOGS)
-                .pattern(" I ")
-                .pattern("###")
-                .unlockedBy("has_logs", this.has(ItemTags.LOGS))
-                .save(output);
+        for (var variant : WoodcutterVariant.values()) {
+            this.shaped(RecipeCategory.DECORATIONS, WoodcutterBlocks.WOODCUTTERS.pick(variant).get())
+                    .define('I', Items.IRON_INGOT)
+                    .define('#', variant.ingredients())
+                    .pattern(" I ")
+                    .pattern("###")
+                    .unlockedBy("has_logs", this.has(variant.ingredients()))
+                    .group("woodcutters")
+                    .save(output);
+        }
     }
 }

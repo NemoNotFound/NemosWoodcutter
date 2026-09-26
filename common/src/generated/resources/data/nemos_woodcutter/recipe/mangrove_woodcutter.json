@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "woodcutters",
+  "key": {
+    "#": "#minecraft:mangrove_logs",
+    "I": "minecraft:iron_ingot"
+  },
+  "pattern": [
+    " I ",
+    "###"
+  ],
+  "result": {
+    "id": "nemos_woodcutter:mangrove_woodcutter"
+  }
+}

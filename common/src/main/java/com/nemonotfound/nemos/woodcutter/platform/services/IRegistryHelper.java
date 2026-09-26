@@ -6,6 +6,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
 import java.util.function.Function;
+import java.util.List;
 import java.util.function.Supplier;
 
 public interface IRegistryHelper {
@@ -15,5 +16,5 @@ public interface IRegistryHelper {
     Supplier<Item> registerItem(String id, Function<Item.Properties, Item> function, Item.Properties properties);
     Supplier<Item> registerItem(String id, Function<Item.Properties, Item> function, Supplier<Item.Properties> properties);
     <T extends CreativeModeTab> Supplier<T> registerCreativeModeTab(String id, Supplier<T> creativeModeTab);
-    CreativeModeTab.Builder createCreativeModeTab();
+    CreativeModeTab.Builder createCreativeModeTab(Supplier<List<Item>> items);
 }

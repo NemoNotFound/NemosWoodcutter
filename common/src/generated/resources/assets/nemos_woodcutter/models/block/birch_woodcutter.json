@@ -1,0 +1,8 @@
+{
+  "parent": "nemos_woodcutter:block/woodcutter",
+  "textures": {
+    "bottom": "nemos_woodcutter:block/birch_woodcutter_bottom",
+    "side": "nemos_woodcutter:block/birch_woodcutter_side",
+    "top": "nemos_woodcutter:block/birch_woodcutter_top"
+  }
+}

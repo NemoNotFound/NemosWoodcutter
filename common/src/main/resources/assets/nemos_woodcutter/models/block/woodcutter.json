@@ -2,10 +2,7 @@
   "render_type": "cutout",
   "parent": "block/block",
   "textures": {
-    "particle": "nemos_woodcutter:block/woodcutter_bottom",
-    "bottom": "nemos_woodcutter:block/woodcutter_bottom",
-    "top": "nemos_woodcutter:block/woodcutter_top",
-    "side": "nemos_woodcutter:block/woodcutter_side",
+    "particle": "#bottom",
     "saw": "nemos_woodcutter:block/woodcutter_saw"
   },
   "elements": [

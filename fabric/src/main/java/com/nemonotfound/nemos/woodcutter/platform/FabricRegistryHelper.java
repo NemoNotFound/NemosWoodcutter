@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
 import java.util.function.Function;
+import java.util.List;
 import java.util.function.Supplier;
 
 import static com.nemonotfound.nemos.woodcutter.Constants.MOD_ID;
@@ -44,8 +45,9 @@ public class FabricRegistryHelper implements IRegistryHelper {
     }
 
     @Override
-    public CreativeModeTab.Builder createCreativeModeTab() {
-        return FabricCreativeModeTab.builder();
+    public CreativeModeTab.Builder createCreativeModeTab(Supplier<List<Item>> items) {
+        return FabricCreativeModeTab.builder()
+                .displayItems((_, output) -> items.get().forEach(output::accept));
     }
 
     private static <T, R extends Registry<? super T>> Supplier<T> registerSupplier(R registry, String id, Supplier<T> object) {

@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
 import java.util.function.Function;
+import java.util.List;
 import java.util.function.Supplier;
 
 public class NeoForgeRegistryHelper implements IRegistryHelper {
@@ -43,8 +44,9 @@ public class NeoForgeRegistryHelper implements IRegistryHelper {
     }
 
     @Override
-    public CreativeModeTab.Builder createCreativeModeTab() {
-        return CreativeModeTab.builder();
+    public CreativeModeTab.Builder createCreativeModeTab(Supplier<List<Item>> items) {
+        return CreativeModeTab.builder()
+                .displayItems((_, output) -> items.get().forEach(output::accept));
     }
 
     private static <T> ResourceKey<T> createResourceKey(ResourceKey<Registry<T>> registryResourceKey, String id) {

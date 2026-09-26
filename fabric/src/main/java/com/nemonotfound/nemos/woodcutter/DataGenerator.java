@@ -1,7 +1,9 @@
 package com.nemonotfound.nemos.woodcutter;
 
 import com.nemonotfound.nemos.woodcutter.datagen.*;
+import com.nemonotfound.nemos.woodcutter.datagen.recipe.*;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator.Pack;
 import net.minecraft.resources.Identifier;
 
 import static com.nemonotfound.nemos.woodcutter.Constants.*;
@@ -10,8 +12,13 @@ public class DataGenerator implements DataGeneratorEntrypoint {
 
     @Override
     public void onInitializeDataGenerator(net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator fabricDataGenerator) {
-        net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
+        Pack pack = fabricDataGenerator.createPack();
         pack.addProvider(WoodcuttingRecipeProvider::new);
+        pack.addProvider(WoodcutterModelProvider::new);
+        pack.addProvider(WoodcutterBlockTagProvider::new);
+        pack.addProvider(WoodcutterItemTagProvider::new);
+        pack.addProvider(WoodcutterLootProvider::new);
+        pack.addProvider(WoodcutterLanguageProvider::new);
 
         var biomesOPlentyPack = fabricDataGenerator.createBuiltinResourcePack(Identifier.fromNamespaceAndPath(MOD_ID, BIOMES_O_PLENTY_MOD_ID));
         biomesOPlentyPack.addProvider(BiomesOPlentyRecipeProvider::new);

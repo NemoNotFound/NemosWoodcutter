@@ -126,7 +126,8 @@ public class WoodcutterMenu extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(@NotNull Player player) {
-        return WoodcutterMenu.stillValid(this.access, player, WoodcutterBlocks.WOODCUTTER.get());
+        return WoodcutterBlocks.WOODCUTTERS.asList().stream()
+                .anyMatch(block -> WoodcutterMenu.stillValid(this.access, player, block.get()));
     }
 
     @Override
@@ -196,7 +197,7 @@ public class WoodcutterMenu extends AbstractContainerMenu {
     }
 
     private void setupResultSlot(int selectedId) {
-        Optional<RecipeHolder<WoodcuttingRecipe>> optionalRecipe;
+        Optional<RecipeHolder<@NotNull WoodcuttingRecipe>> optionalRecipe;
 
         if (this.recipesForInput.hasRecipes() && this.isValidRecipeIndex(selectedId)) {
             var groupEntry = this.recipesForInput.entries().get(selectedId);

@@ -1,6 +1,7 @@
 package com.nemonotfound.nemos.woodcutter.world.level.block;
 
 import com.nemonotfound.nemos.woodcutter.platform.Services;
+import com.nemonotfound.nemos.woodcutter.references.WoodcutterBlockItemIds;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -12,14 +13,16 @@ import java.util.function.Supplier;
 
 public class WoodcutterBlocks {
 
-    public static final Supplier<Block> WOODCUTTER = register(
-            "woodcutter",
-            WoodcutterBlock::new,
-            BlockBehaviour.Properties.of()
+    public static final WoodCollection<Supplier<Block>> WOODCUTTERS = WoodCollection.registerBlocks(
+            WoodcutterBlockItemIds.WOODCUTTERS,
+            WoodcutterBlocks::register,
+            (_, properties) -> new WoodcutterBlock(properties),
+            _ -> BlockBehaviour.Properties.of()
                     .sound(SoundType.WOOD)
                     .mapColor(MapColor.WOOD)
                     .instrument(NoteBlockInstrument.BASS)
-                    .strength(2.0f));
+                    .strength(2.0f)
+    );
 
     public static void init() {}
 

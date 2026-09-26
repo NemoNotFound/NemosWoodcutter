@@ -1,6 +1,5 @@
 package com.nemonotfound.nemos.woodcutter;
 
-import com.nemonotfound.nemos.woodcutter.item.ModCreativeModeTabs;
 import com.nemonotfound.nemos.woodcutter.item.recipe.ModRecipeSerializerFabric;
 import com.nemonotfound.nemos.woodcutter.item.recipe.ModRecipeTypesFabric;
 import com.nemonotfound.nemos.woodcutter.item.recipe.book.ModRecipeBookCategoryFabric;
@@ -22,6 +21,8 @@ public class FabricNemosWoodcutter implements ModInitializer {
     public void onInitialize() {
         NemosWoodcutterCommon.init();
 
+        addWoodcutterAlias();
+
         if (Services.MOD_LOADER_HELPER.isModLoaded(BIOMES_O_PLENTY_MOD_ID)) {
             registerBuiltInBiomesOPlentyDataPack();
         }
@@ -42,12 +43,20 @@ public class FabricNemosWoodcutter implements ModInitializer {
             registerBuiltInNemosVerticalSlabsXNemosMossyBlocksDataPack();
         }
 
-        ModCreativeModeTabs.register();
         ModRecipeSerializerFabric.register();
         ModRecipeTypesFabric.register();
         ModRecipeBookCategoryFabric.register();
         ModRecipeDisplaysFabric.register();
         ModMenuTypesFabric.register();
+    }
+
+    // Will be removed in 26.3
+    @Deprecated(forRemoval = true)
+    private static void addWoodcutterAlias() {
+        var oldId = Identifier.fromNamespaceAndPath(MOD_ID, "woodcutter");
+        var oakId = Identifier.fromNamespaceAndPath(MOD_ID, "oak_woodcutter");
+        net.minecraft.core.registries.BuiltInRegistries.BLOCK.addAlias(oldId, oakId);
+        net.minecraft.core.registries.BuiltInRegistries.ITEM.addAlias(oldId, oakId);
     }
 
     private void registerBuiltInBiomesOPlentyDataPack() {

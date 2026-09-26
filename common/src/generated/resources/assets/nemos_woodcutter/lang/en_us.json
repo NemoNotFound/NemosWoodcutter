@@ -1,0 +1,19 @@
+{
+  "block.nemos_woodcutter.acacia_woodcutter": "Acacia Woodcutter",
+  "block.nemos_woodcutter.bamboo_woodcutter": "Bamboo Woodcutter",
+  "block.nemos_woodcutter.birch_woodcutter": "Birch Woodcutter",
+  "block.nemos_woodcutter.cherry_woodcutter": "Cherry Woodcutter",
+  "block.nemos_woodcutter.crimson_woodcutter": "Crimson Woodcutter",
+  "block.nemos_woodcutter.dark_oak_woodcutter": "Dark Oak Woodcutter",
+  "block.nemos_woodcutter.jungle_woodcutter": "Jungle Woodcutter",
+  "block.nemos_woodcutter.mangrove_woodcutter": "Mangrove Woodcutter",
+  "block.nemos_woodcutter.oak_woodcutter": "Oak Woodcutter",
+  "block.nemos_woodcutter.pale_oak_woodcutter": "Pale Oak Woodcutter",
+  "block.nemos_woodcutter.poplar_woodcutter": "Poplar Woodcutter",
+  "block.nemos_woodcutter.spruce_woodcutter": "Spruce Woodcutter",
+  "block.nemos_woodcutter.warped_woodcutter": "Warped Woodcutter",
+  "container.woodcutter": "Woodcutter",
+  "itemGroup.nemos_woodcutter.woodcutters": "Woodcutters",
+  "resourcePack.nemos_woodcutter.dark_mode.description": "Dark GUI for the Woodcutter",
+  "resourcePack.nemos_woodcutter.dark_mode.name": "Dark Mode"
+}

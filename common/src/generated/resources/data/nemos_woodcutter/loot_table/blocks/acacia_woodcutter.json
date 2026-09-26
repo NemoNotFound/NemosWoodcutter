@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "nemos_woodcutter:acacia_woodcutter"
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}

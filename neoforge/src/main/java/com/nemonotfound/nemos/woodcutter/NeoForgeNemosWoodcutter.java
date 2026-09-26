@@ -1,7 +1,6 @@
 package com.nemonotfound.nemos.woodcutter;
 
 
-import com.nemonotfound.nemos.woodcutter.item.ModCreativeModeTabs;
 import com.nemonotfound.nemos.woodcutter.item.recipe.ModRecipeSerializerNeoForge;
 import com.nemonotfound.nemos.woodcutter.item.recipe.ModRecipeTypesNeoForge;
 import com.nemonotfound.nemos.woodcutter.item.recipe.book.ModRecipeBookCategoryNeoForge;
@@ -35,17 +34,26 @@ public class NeoForgeNemosWoodcutter {
     public NeoForgeNemosWoodcutter(IEventBus eventBus) {
         NemosWoodcutterCommon.init();
 
+        addWoodcutterAlias();
+
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
         CREATIVE_TABS.register(eventBus);
-
-        eventBus.addListener(ModCreativeModeTabs::modifyFunctionalItemGroup);
 
         ModRecipeSerializerNeoForge.register(eventBus);
         ModRecipeTypesNeoForge.register(eventBus);
         ModRecipeBookCategoryNeoForge.register(eventBus);
         ModRecipeDisplaysNeoForge.register(eventBus);
         ModMenuTypesNeoForge.register(eventBus);
+    }
+
+    // Will be removed in 26.3
+    @Deprecated(forRemoval = true)
+    private static void addWoodcutterAlias() {
+        var oldId = Identifier.fromNamespaceAndPath(MOD_ID, "woodcutter");
+        var oakId = Identifier.fromNamespaceAndPath(MOD_ID, "oak_woodcutter");
+        BLOCKS.addAlias(oldId, oakId);
+        ITEMS.addAlias(oldId, oakId);
     }
 
     @SubscribeEvent

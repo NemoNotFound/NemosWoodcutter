@@ -2,6 +2,8 @@ package com.nemonotfound.nemos.woodcutter.world.item;
 
 import com.nemonotfound.nemos.woodcutter.platform.Services;
 import com.nemonotfound.nemos.woodcutter.world.level.block.WoodcutterBlocks;
+import com.nemonotfound.nemos.woodcutter.references.WoodcutterBlockItemIds;
+import com.nemonotfound.nemos.woodcutter.world.level.block.WoodCollection;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -10,7 +12,11 @@ import java.util.function.Supplier;
 
 public class WoodcutterItems {
 
-    public static final Supplier<Item> WOODCUTTER = registerBlockItem("woodcutter", WoodcutterBlocks.WOODCUTTER);
+    public static final WoodCollection<Supplier<Item>> WOODCUTTERS = WoodCollection.registerBlockItems(
+            WoodcutterBlockItemIds.WOODCUTTERS,
+            WoodcutterBlocks.WOODCUTTERS,
+            (id, block, _) -> registerBlockItem(id, block)
+    );
 
     public static void init() {}
 
