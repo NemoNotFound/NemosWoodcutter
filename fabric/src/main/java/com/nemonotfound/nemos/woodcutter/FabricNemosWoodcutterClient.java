@@ -28,5 +28,13 @@ public class FabricNemosWoodcutterClient implements ClientModInitializer {
                         Component.translatable("resourcePack.nemos_woodcutter.dark_mode.name"),
                         PackActivationType.NORMAL
                 ));
+
+        FabricLoader.getInstance().getModContainer(MOD_ID).ifPresent(container ->
+                ResourceLoader.registerBuiltinPack(
+                        Identifier.fromNamespaceAndPath(MOD_ID, "classic"),
+                        container,
+                        Component.translatable("resourcePack.nemos_woodcutter.classic.name"),
+                        PackActivationType.NORMAL
+                ));
     }
 }

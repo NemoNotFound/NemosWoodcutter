@@ -69,6 +69,15 @@ public class NeoForgeNemosWoodcutter {
                     false,
                     Pack.Position.TOP
             );
+
+            event.addPackFinders(
+                    Identifier.fromNamespaceAndPath(MOD_ID, "resourcepacks/classic"),
+                    PackType.CLIENT_RESOURCES,
+                    Component.translatable("resourcePack.nemos_woodcutter.classic.name"),
+                    PackSource.BUILT_IN,
+                    false,
+                    Pack.Position.TOP
+            );
         }
 
         if (packType == PackType.SERVER_DATA) {

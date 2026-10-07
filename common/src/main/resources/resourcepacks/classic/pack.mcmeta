@@ -1,0 +1,9 @@
+{
+   "pack": {
+      "min_format": 97.1,
+      "max_format": 97.1,
+      "description": {
+         "translate": "resourcePack.nemos_woodcutter.classic.description"
+      }
+   }
+}

@@ -14,6 +14,8 @@
   "block.nemos_woodcutter.warped_woodcutter": "Warped Woodcutter",
   "container.woodcutter": "Woodcutter",
   "itemGroup.nemos_woodcutter.woodcutters": "Woodcutters",
-  "resourcePack.nemos_woodcutter.dark_mode.description": "Dark GUI for the Woodcutter",
+  "resourcePack.nemos_woodcutter.classic.description": "Classic woodcutter textures",
+  "resourcePack.nemos_woodcutter.classic.name": "Classic",
+  "resourcePack.nemos_woodcutter.dark_mode.description": "Dark GUI for the woodcutter",
   "resourcePack.nemos_woodcutter.dark_mode.name": "Dark Mode"
 }

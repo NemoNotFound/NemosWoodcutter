@@ -19,7 +19,9 @@ public class WoodcutterLanguageProvider extends FabricLanguageProvider {
         translations.add("container.woodcutter", "Woodcutter");
         translations.add("itemGroup.nemos_woodcutter.woodcutters", "Woodcutters");
         translations.add("resourcePack.nemos_woodcutter.dark_mode.name", "Dark Mode");
-        translations.add("resourcePack.nemos_woodcutter.dark_mode.description", "Dark GUI for the Woodcutter");
+        translations.add("resourcePack.nemos_woodcutter.dark_mode.description", "Dark GUI for the woodcutter");
+        translations.add("resourcePack.nemos_woodcutter.classic.name", "Classic");
+        translations.add("resourcePack.nemos_woodcutter.classic.description", "Classic woodcutter textures");
 
         translations.add(WoodcutterBlocks.WOODCUTTERS.oak().get(), "Oak Woodcutter");
         translations.add(WoodcutterBlocks.WOODCUTTERS.spruce().get(), "Spruce Woodcutter");
