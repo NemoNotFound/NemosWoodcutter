@@ -1,4 +1,4 @@
-# Changelog - v1.15
+# Changelog v1.15
 
 ## Additions
 - Added woodcutter variants for all wood types
