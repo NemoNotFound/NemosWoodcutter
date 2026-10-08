@@ -1,0 +1,21 @@
+{
+  "block.nemos_woodcutter.acacia_woodcutter": "Akasya Odun Kesici",
+  "block.nemos_woodcutter.bamboo_woodcutter": "Bambu Odun Kesici",
+  "block.nemos_woodcutter.birch_woodcutter": "Huş Odun Kesici",
+  "block.nemos_woodcutter.cherry_woodcutter": "Kiraz Odun Kesici",
+  "block.nemos_woodcutter.crimson_woodcutter": "Kızıl Odun Kesici",
+  "block.nemos_woodcutter.dark_oak_woodcutter": "Koyu Meşe Odun Kesici",
+  "block.nemos_woodcutter.jungle_woodcutter": "Orman Ağacı Odun Kesici",
+  "block.nemos_woodcutter.mangrove_woodcutter": "Mangrov Odun Kesici",
+  "block.nemos_woodcutter.oak_woodcutter": "Meşe Odun Kesici",
+  "block.nemos_woodcutter.pale_oak_woodcutter": "Soluk Meşe Odun Kesici",
+  "block.nemos_woodcutter.poplar_woodcutter": "Kavak Odun Kesici",
+  "block.nemos_woodcutter.spruce_woodcutter": "Ladin Odun Kesici",
+  "block.nemos_woodcutter.warped_woodcutter": "Çarpık Odun Kesici",
+  "container.woodcutter": "Odun Kesici",
+  "itemGroup.nemos_woodcutter.woodcutters": "Odun Kesiciler",
+  "resourcePack.nemos_woodcutter.classic.description": "Klasik odun kesici dokuları",
+  "resourcePack.nemos_woodcutter.classic.name": "Klasik",
+  "resourcePack.nemos_woodcutter.dark_mode.description": "Odun kesici için koyu arayüz",
+  "resourcePack.nemos_woodcutter.dark_mode.name": "Koyu Mod"
+}
