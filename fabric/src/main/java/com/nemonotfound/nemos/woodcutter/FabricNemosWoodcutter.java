@@ -73,7 +73,7 @@ public class FabricNemosWoodcutter implements ModInitializer {
     @Deprecated(forRemoval = true)
     private static void addMoreWoodcutterVariantsAliases() {
         WoodcutterBlockItemIds.WOODCUTTERS.forEach(id -> {
-            var oldId = Identifier.fromNamespaceAndPath("nemos_more_woodcutter_variants", id);
+            var oldId = Identifier.fromNamespaceAndPath("more_nemos_woodcutter_variants", id);
             var newId = Identifier.fromNamespaceAndPath(MOD_ID, id);
 
             net.minecraft.core.registries.BuiltInRegistries.BLOCK.addAlias(oldId, newId);
