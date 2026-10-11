@@ -1,0 +1,11 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "wilderwild:hollowed_dark_oak_log",
+  "inputCount": 1,
+  "modDependencies": [
+    "wilderwild"
+  ],
+  "result": {
+    "id": "wilderwild:stripped_hollowed_dark_oak_log"
+  }
+}

@@ -17,12 +17,21 @@ dependencies {
     compileOnly("maven.modrinth:glitchcore:${glitchcore_version}-fabric")
     compileOnly("maven.modrinth:nemos-mossy-blocks:${nemos_mossy_blocks_version}-fabric")
     compileOnly("maven.modrinth:nemos-vertical-slabs:${nemos_vertical_slabs_version}-fabric")
+    compileOnly("maven.modrinth:wilder-wild:${wilder_wild_version}-fabric")
+    compileOnly("maven.modrinth:frozenlib:${frozenlib_version}-fabric")
+    compileOnly("maven.modrinth:better-archeology:${better_archeology_version}-fabric")
+    compileOnly("maven.modrinth:architectury-api:${architectury_api_version}+fabric")
 
+    localRuntime("maven.modrinth:wilder-wild:${wilder_wild_version}-fabric")
+    localRuntime("maven.modrinth:frozenlib:${frozenlib_version}-fabric")
     localRuntime("maven.modrinth:biomes-o-plenty:${biomes_o_plenty_version}-fabric")
     localRuntime("maven.modrinth:terrablender:${terrablender_version}-fabric")
     localRuntime("maven.modrinth:glitchcore:${glitchcore_version}-fabric")
     localRuntime("maven.modrinth:nemos-mossy-blocks:${nemos_mossy_blocks_version}-fabric")
     localRuntime("maven.modrinth:nemos-vertical-slabs:${nemos_vertical_slabs_version}-fabric")
+    localRuntime("maven.modrinth:better-archeology:${better_archeology_version}-fabric")
+    localRuntime("maven.modrinth:architectury-api:${architectury_api_version}+fabric")
+    localRuntime("maven.modrinth:resourceful-config:${resourceful_config_version}-fabric")
 }
 
 fabricApi {
@@ -30,6 +39,12 @@ fabricApi {
         client = true
         outputDirectory = project(':common').file('src/generated/resources/')
         modId = project.mod_id
+    }
+}
+
+processResources { // Conflicts with BOP, so this was done as a work-around
+    from(project(':common').file('src/generated-wilder-wild/resources/')) {
+        include 'resourcepacks/wilderwild/**'
     }
 }
 
@@ -60,6 +75,12 @@ loom {
         defaultRefmapName.set("${mod_id}.refmap.json")
     }
     runs {
+        datagenWilderWild { // Conflicts with BOP, so this was done as a work-around
+            inherit(getByName('datagen'))
+            setConfigName('Fabric Data Generation (Wilder Wild)')
+            runDir('run/datagen')
+            property('fabric-api.datagen.output-dir', project(':common').file('src/generated-wilder-wild/resources/').absolutePath)
+        }
         client {
             client()
             setConfigName('Fabric Client')
@@ -75,6 +96,20 @@ loom {
     }
 }
 
+// These mods register the same two suspicious-stew recipe IDs. Keep them in
+// separate data-generation JVMs while retaining a single command for users.
+tasks.matching { it.name == 'runDatagen' }.configureEach {
+    classpath = files(classpath.filter { file ->
+        !file.name.startsWith('wilder-wild')
+    })
+    dependsOn(tasks.named('runDatagenWilderWild'))
+}
+tasks.matching { it.name == 'runDatagenWilderWild' }.configureEach {
+    classpath = files(classpath.filter { file ->
+        !['biomes-o-plenty', 'terrablender', 'glitchcore'].any { file.name.startsWith(it) }
+    })
+}
+
 tasks.register('publishCurseForge', TaskPublishCurseForge) {
     dependsOn(tasks.jar)
     apiToken = System.getenv("CURSEFORGE_TOKEN")
@@ -88,6 +123,8 @@ tasks.register('publishCurseForge', TaskPublishCurseForge) {
     mainFile.addEnvironment("Client", "Server")
     mainFile.addJavaVersion("Java 25")
     mainFile.addRequirement("fabric-api")
+    mainFile.addOptional("wilder-wild")
+    mainFile.addOptional("better-archeology")
     mainFile.addOptional("biomes-o-plenty")
     mainFile.addOptional("nemos-mossy-blocks")
     mainFile.addOptional("nemos-vertical-slabs")
@@ -102,6 +139,8 @@ modrinth {
     uploadFile.set(tasks.jar)
     dependencies {
         required.project("fabric-api")
+        optional.project("wilder-wild")
+        optional.project("better-archeology")
         optional.project("biomes-o-plenty")
         optional.project("nemos-mossy-blocks")
         optional.project("nemos-vertical-slabs")

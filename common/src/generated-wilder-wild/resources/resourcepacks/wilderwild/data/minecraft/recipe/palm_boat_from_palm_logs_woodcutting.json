@@ -1,0 +1,11 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "#wilderwild:palm_logs",
+  "inputCount": 1,
+  "modDependencies": [
+    "wilderwild"
+  ],
+  "result": {
+    "id": "wilderwild:palm_boat"
+  }
+}

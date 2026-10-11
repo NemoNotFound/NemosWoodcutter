@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_hollowed_oak_logs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#wilderwild:hollowed_oak_logs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "minecraft:oak_planks_from_hollowed_oak_logs_woodcutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_hollowed_oak_logs"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:oak_planks_from_hollowed_oak_logs_woodcutting"
+    ]
+  }
+}

@@ -1,9 +1,5 @@
-# Changelog v1.15
+# Changelog v1.15.1
 
 ## Additions
-- Added woodcutter variants for all wood types
-- Added "Classic" resource pack with classic woodcutter textures
-
-## Changes
-- Changed woodcutter texture 
-  - Let me know what you think
+- Added 26.3 woodcutting support for Wilder Wild and Better Archeology
+- Added aliases for Nemo's More Woodcutter Variants to avoid woodcutters from earlier versions to vanish

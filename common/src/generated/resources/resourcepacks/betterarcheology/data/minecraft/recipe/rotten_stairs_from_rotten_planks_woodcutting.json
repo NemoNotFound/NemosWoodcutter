@@ -1,0 +1,11 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "betterarcheology:rotten_planks",
+  "inputCount": 1,
+  "modDependencies": [
+    "betterarcheology"
+  ],
+  "result": {
+    "id": "betterarcheology:rotten_stairs"
+  }
+}

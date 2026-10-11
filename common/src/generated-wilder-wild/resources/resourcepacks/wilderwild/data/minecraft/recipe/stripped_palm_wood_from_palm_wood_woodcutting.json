@@ -1,0 +1,11 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "wilderwild:palm_wood",
+  "inputCount": 1,
+  "modDependencies": [
+    "wilderwild"
+  ],
+  "result": {
+    "id": "wilderwild:stripped_palm_wood"
+  }
+}

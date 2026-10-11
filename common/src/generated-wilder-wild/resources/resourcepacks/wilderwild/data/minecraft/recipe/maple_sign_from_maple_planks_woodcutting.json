@@ -1,0 +1,12 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "wilderwild:maple_planks",
+  "inputCount": 1,
+  "modDependencies": [
+    "wilderwild"
+  ],
+  "result": {
+    "count": 3,
+    "id": "wilderwild:maple_sign"
+  }
+}

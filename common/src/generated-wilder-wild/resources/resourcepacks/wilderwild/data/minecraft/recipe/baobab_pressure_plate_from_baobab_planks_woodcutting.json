@@ -1,0 +1,12 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "wilderwild:baobab_planks",
+  "inputCount": 1,
+  "modDependencies": [
+    "wilderwild"
+  ],
+  "result": {
+    "count": 4,
+    "id": "wilderwild:baobab_pressure_plate"
+  }
+}

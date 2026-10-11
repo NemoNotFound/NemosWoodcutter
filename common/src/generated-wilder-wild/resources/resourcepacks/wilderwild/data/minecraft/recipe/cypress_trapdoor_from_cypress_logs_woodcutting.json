@@ -1,0 +1,12 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "#wilderwild:cypress_logs",
+  "inputCount": 1,
+  "modDependencies": [
+    "wilderwild"
+  ],
+  "result": {
+    "count": 8,
+    "id": "wilderwild:cypress_trapdoor"
+  }
+}

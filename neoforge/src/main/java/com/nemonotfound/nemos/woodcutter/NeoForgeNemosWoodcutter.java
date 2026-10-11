@@ -47,7 +47,7 @@ public class NeoForgeNemosWoodcutter {
         ModMenuTypesNeoForge.register(eventBus);
     }
 
-    // Will be removed in 26.3
+    // Will be removed in 26.4
     @Deprecated(forRemoval = true)
     private static void addWoodcutterAlias() {
         var oldId = Identifier.fromNamespaceAndPath(MOD_ID, "woodcutter");
@@ -81,12 +81,44 @@ public class NeoForgeNemosWoodcutter {
         }
 
         if (packType == PackType.SERVER_DATA) {
+            registerBuiltInWilderWildDataPack(event);
+            registerBuiltInBetterArcheologyDataPack(event);
             registerBuiltInBiomesOPlentyDataPack(event);
             registerBuiltInNemosMossyBlocksDataPack(event);
             registerBuiltInNemosVerticalSlabsDataPack(event);
             registerBuiltInNemosVerticalSlabsBiomesOPlentyDataPack(event);
             registerBuiltInNemosVerticalSlabsMossyBlocksDataPack(event);
         }
+    }
+
+    public static void registerBuiltInWilderWildDataPack(AddPackFindersEvent event) {
+        if (!Services.MOD_LOADER_HELPER.isModLoaded(WILDER_WILD_MOD_ID)) {
+            return;
+        }
+
+        event.addPackFinders(
+                Identifier.fromNamespaceAndPath(MOD_ID, "resourcepacks/" + WILDER_WILD_MOD_ID),
+                PackType.SERVER_DATA,
+                Component.literal("Wilder Wild"),
+                PackSource.BUILT_IN,
+                true,
+                Pack.Position.TOP
+        );
+    }
+
+    public static void registerBuiltInBetterArcheologyDataPack(AddPackFindersEvent event) {
+        if (!Services.MOD_LOADER_HELPER.isModLoaded(BETTER_ARCHEOLOGY_MOD_ID)) {
+            return;
+        }
+
+        event.addPackFinders(
+                Identifier.fromNamespaceAndPath(MOD_ID, "resourcepacks/" + BETTER_ARCHEOLOGY_MOD_ID),
+                PackType.SERVER_DATA,
+                Component.literal("Better Archeology"),
+                PackSource.BUILT_IN,
+                true,
+                Pack.Position.TOP
+        );
     }
 
     public static void registerBuiltInBiomesOPlentyDataPack(AddPackFindersEvent event) {

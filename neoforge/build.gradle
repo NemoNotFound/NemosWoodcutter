@@ -42,7 +42,16 @@ neoForge {
     }
 }
 
-sourceSets.main.resources { srcDir project.project(':common').file('src/generated/resources/').getAbsolutePath() }
+sourceSets.main.resources {
+    srcDir project.project(':common').file('src/generated/resources/').getAbsolutePath()
+}
+
+processResources {
+    mustRunAfter(project(':fabric').tasks.named('runDatagen'))
+    from(project(':common').file('src/generated-wilder-wild/resources/')) {
+        include 'resourcepacks/wilderwild/**'
+    }
+}
 
 tasks.register('publishCurseForge', TaskPublishCurseForge) {
     group = "publishing"
@@ -58,6 +67,8 @@ tasks.register('publishCurseForge', TaskPublishCurseForge) {
     mainFile.addModLoader("NeoForge")
     mainFile.addEnvironment("Client", "Server")
     mainFile.addJavaVersion("Java 25")
+    mainFile.addOptional("wilder-wild")
+    mainFile.addOptional("better-archeology")
     mainFile.addOptional("biomes-o-plenty")
     mainFile.addOptional("nemos-mossy-blocks")
     mainFile.addOptional("nemos-vertical-slabs")
@@ -75,9 +86,11 @@ modrinth {
     ]
 
     dependencies {
-        optional.project("biomes-o-plenty");
-        optional.project("nemos-mossy-blocks");
-        optional.project("nemos-vertical-slabs");
+        optional.project("wilder-wild")
+        optional.project("better-archeology")
+        optional.project("biomes-o-plenty")
+        optional.project("nemos-mossy-blocks")
+        optional.project("nemos-vertical-slabs")
     }
 }
 tasks.modrinth.dependsOn(tasks.jar)

@@ -90,7 +90,12 @@ processResources {
             'biomes_o_plenty_version'      : biomes_o_plenty_version,
             'terrablender_version'         : terrablender_version,
             'glitchcore_version'           : glitchcore_version,
-            'nemos_mossy_blocks_version'   : nemos_mossy_blocks_version
+            'nemos_mossy_blocks_version'   : nemos_mossy_blocks_version,
+            'wilder_wild_version'          : wilder_wild_version,
+            'frozenlib_version'            : frozenlib_version,
+            'better_archeology_version'    : better_archeology_version,
+            'architectury_api_version'     : architectury_api_version,
+            'resourceful_config_version'   : resourceful_config_version
     ]
 
     filesMatching(['pack.mcmeta', 'fabric.mod.json', 'META-INF/mods.toml', 'META-INF/neoforge.mods.toml', '*.mixins.json']) {

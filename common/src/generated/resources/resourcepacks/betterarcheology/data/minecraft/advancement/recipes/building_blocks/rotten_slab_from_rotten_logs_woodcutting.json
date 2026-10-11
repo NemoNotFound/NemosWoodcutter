@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rotten_logs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#betterarcheology:rotten_logs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "minecraft:rotten_slab_from_rotten_logs_woodcutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rotten_logs"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:rotten_slab_from_rotten_logs_woodcutting"
+    ]
+  }
+}
