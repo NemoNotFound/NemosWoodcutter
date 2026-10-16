@@ -1,4 +1,8 @@
-# Changelog v1.15.2
+# Changelog v1.15.3
 
 ## Additions
-- Added aliases for More Nemo's  Woodcutter Variants to avoid woodcutters from earlier versions to vanish
+- Added translations for:
+  - de_de
+  - ru_ru
+  - tr_tr
+  - zh_cn

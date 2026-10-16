@@ -1,0 +1,21 @@
+{
+  "block.nemos_woodcutter.acacia_woodcutter": "Акациевый дереворез",
+  "block.nemos_woodcutter.bamboo_woodcutter": "Бамбуковый дереворез",
+  "block.nemos_woodcutter.birch_woodcutter": "Берёзовый дереворез",
+  "block.nemos_woodcutter.cherry_woodcutter": "Вишнёвый дереворез",
+  "block.nemos_woodcutter.crimson_woodcutter": "Багровый дереворез",
+  "block.nemos_woodcutter.dark_oak_woodcutter": "Дереворез из тёмного дуба",
+  "block.nemos_woodcutter.jungle_woodcutter": "Дереворез из джунглевого дерева",
+  "block.nemos_woodcutter.mangrove_woodcutter": "Мангровый дереворез",
+  "block.nemos_woodcutter.oak_woodcutter": "Дубовый дереворез",
+  "block.nemos_woodcutter.pale_oak_woodcutter": "Дереворез из бледного дуба",
+  "block.nemos_woodcutter.poplar_woodcutter": "Тополевый дереворез",
+  "block.nemos_woodcutter.spruce_woodcutter": "Еловый дереворез",
+  "block.nemos_woodcutter.warped_woodcutter": "Искажённый дереворез",
+  "container.woodcutter": "Дереворез",
+  "itemGroup.nemos_woodcutter.woodcutters": "Дереворезы",
+  "resourcePack.nemos_woodcutter.classic.description": "Классические текстуры деревореза",
+  "resourcePack.nemos_woodcutter.classic.name": "Классический",
+  "resourcePack.nemos_woodcutter.dark_mode.description": "Тёмный интерфейс деревореза",
+  "resourcePack.nemos_woodcutter.dark_mode.name": "Тёмный режим"
+}

@@ -1,0 +1,21 @@
+{
+  "block.nemos_woodcutter.acacia_woodcutter": "金合欢木切木机",
+  "block.nemos_woodcutter.bamboo_woodcutter": "竹切木机",
+  "block.nemos_woodcutter.birch_woodcutter": "白桦木切木机",
+  "block.nemos_woodcutter.cherry_woodcutter": "樱花木切木机",
+  "block.nemos_woodcutter.crimson_woodcutter": "绯红木切木机",
+  "block.nemos_woodcutter.dark_oak_woodcutter": "深色橡木切木机",
+  "block.nemos_woodcutter.jungle_woodcutter": "丛林木切木机",
+  "block.nemos_woodcutter.mangrove_woodcutter": "红树木切木机",
+  "block.nemos_woodcutter.oak_woodcutter": "橡木切木机",
+  "block.nemos_woodcutter.pale_oak_woodcutter": "苍白橡木切木机",
+  "block.nemos_woodcutter.poplar_woodcutter": "杨木切木机",
+  "block.nemos_woodcutter.spruce_woodcutter": "云杉木切木机",
+  "block.nemos_woodcutter.warped_woodcutter": "诡异木切木机",
+  "container.woodcutter": "切木机",
+  "itemGroup.nemos_woodcutter.woodcutters": "切木机",
+  "resourcePack.nemos_woodcutter.classic.description": "经典切木机纹理",
+  "resourcePack.nemos_woodcutter.classic.name": "经典",
+  "resourcePack.nemos_woodcutter.dark_mode.description": "切木机的深色界面",
+  "resourcePack.nemos_woodcutter.dark_mode.name": "深色模式"
+}

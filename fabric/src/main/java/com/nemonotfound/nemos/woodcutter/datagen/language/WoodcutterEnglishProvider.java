@@ -1,4 +1,4 @@
-package com.nemonotfound.nemos.woodcutter.datagen;
+package com.nemonotfound.nemos.woodcutter.datagen.language;
 
 import com.nemonotfound.nemos.woodcutter.world.level.block.WoodcutterBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
@@ -8,9 +8,9 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
 
-public class WoodcutterLanguageProvider extends FabricLanguageProvider {
+public class WoodcutterEnglishProvider extends FabricLanguageProvider {
 
-    public WoodcutterLanguageProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+    public WoodcutterEnglishProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries);
     }
 

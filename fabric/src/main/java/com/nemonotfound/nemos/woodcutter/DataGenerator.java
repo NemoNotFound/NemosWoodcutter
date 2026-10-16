@@ -2,6 +2,7 @@ package com.nemonotfound.nemos.woodcutter;
 
 import com.nemonotfound.nemos.woodcutter.datagen.*;
 import com.nemonotfound.nemos.woodcutter.datagen.WoodcuttingRecipeProvider;
+import com.nemonotfound.nemos.woodcutter.datagen.language.*;
 import com.nemonotfound.nemos.woodcutter.datagen.recipe.*;
 import com.nemonotfound.nemos.woodcutter.platform.Services;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -28,7 +29,11 @@ public class DataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(WoodcutterBlockTagProvider::new);
         pack.addProvider(WoodcutterItemTagProvider::new);
         pack.addProvider(WoodcutterLootProvider::new);
-        pack.addProvider(WoodcutterLanguageProvider::new);
+        pack.addProvider(WoodcutterEnglishProvider::new);
+        pack.addProvider(WoodcutterTurkishProvider::new);
+        pack.addProvider(WoodcutterGermanProvider::new);
+        pack.addProvider(WoodcutterRussianProvider::new);
+        pack.addProvider(WoodcutterChineseProvider::new);
 
         createModCompRecipes(fabricDataGenerator, BETTER_ARCHEOLOGY_MOD_ID, BetterArcheologyRecipeProvider::new);
         createModCompRecipes(fabricDataGenerator, BIOMES_O_PLENTY_MOD_ID, BiomesOPlentyRecipeProvider::new);

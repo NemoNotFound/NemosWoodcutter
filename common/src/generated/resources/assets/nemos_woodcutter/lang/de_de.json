@@ -1,0 +1,21 @@
+{
+  "block.nemos_woodcutter.acacia_woodcutter": "Akazienholzsäge",
+  "block.nemos_woodcutter.bamboo_woodcutter": "Bambusholzsäge",
+  "block.nemos_woodcutter.birch_woodcutter": "Birkenholzsäge",
+  "block.nemos_woodcutter.cherry_woodcutter": "Kirschholzsäge",
+  "block.nemos_woodcutter.crimson_woodcutter": "Karmesinholzsäge",
+  "block.nemos_woodcutter.dark_oak_woodcutter": "Schwarzeichenholzsäge",
+  "block.nemos_woodcutter.jungle_woodcutter": "Tropenholzsäge",
+  "block.nemos_woodcutter.mangrove_woodcutter": "Mangrovenholzsäge",
+  "block.nemos_woodcutter.oak_woodcutter": "Eichenholzsäge",
+  "block.nemos_woodcutter.pale_oak_woodcutter": "Blasseichenholzsäge",
+  "block.nemos_woodcutter.poplar_woodcutter": "Pappelholzsäge",
+  "block.nemos_woodcutter.spruce_woodcutter": "Fichtenholzsäge",
+  "block.nemos_woodcutter.warped_woodcutter": "Wirrholzsäge",
+  "container.woodcutter": "Holzsäge",
+  "itemGroup.nemos_woodcutter.woodcutters": "Holzsägen",
+  "resourcePack.nemos_woodcutter.classic.description": "Klassische Holzsägen-Texturen",
+  "resourcePack.nemos_woodcutter.classic.name": "Klassisch",
+  "resourcePack.nemos_woodcutter.dark_mode.description": "Dunkle Benutzeroberfläche für die Holzsäge",
+  "resourcePack.nemos_woodcutter.dark_mode.name": "Dunkler Modus"
+}
