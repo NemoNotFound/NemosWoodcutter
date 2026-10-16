@@ -10,13 +10,13 @@ Also, if you like the old woodcutter design better, there is a built-in resource
 
 ## Supported Mods
 
-| Mod                                                                    | Author      | Added in Woodcutter Version | Loaders on 26.3  |
-|------------------------------------------------------------------------|-------------|-----------------------------|------------------|
-| [Biomes O' Plenty](https://modrinth.com/mod/biomes-o-plenty)           | Forstride   | 1.13                        | Fabric, NeoForge |
-| [Nemo's Mossy Blocks](https://modrinth.com/mod/nemos-mossy-blocks)     | Nemo _(me)_ | 1.14                        | Fabric           |
-| [Nemo's Vertical Slabs](https://modrinth.com/mod/nemos-vertical-slabs) | Nemo _(me)_ | 1.14.1                      | Fabric           |
-| [Wilder Wild](https://modrinth.com/mod/wilder-wild)                    | FrozenBlock | 1.15.1                      | Fabric, NeoForge |
-| [Better Archeology](https://modrinth.com/mod/better-archeology)        | Pandarix    | 1.15.1                      | Fabric, NeoForge |
+| Mod                                                                    | Author      | Added in Version |
+|------------------------------------------------------------------------|-------------|------------------|
+| [Biomes O' Plenty](https://modrinth.com/mod/biomes-o-plenty)           | Forstride   | 1.13             |
+| [Nemo's Mossy Blocks](https://modrinth.com/mod/nemos-mossy-blocks)     | Nemo _(me)_ | 1.14             |
+| [Nemo's Vertical Slabs](https://modrinth.com/mod/nemos-vertical-slabs) | Nemo _(me)_ | 1.14.1           |
+| [Wilder Wild](https://modrinth.com/mod/wilder-wild)                    | FrozenBlock | 1.15.1           |
+| [Better Archeology](https://modrinth.com/mod/better-archeology)        | Pandarix    | 1.15.1           |
 
 | Mod                                                                                                                | Author    | Supported Versions |
 |--------------------------------------------------------------------------------------------------------------------|-----------|--------------------|
